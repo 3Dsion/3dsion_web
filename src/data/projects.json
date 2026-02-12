@@ -1,0 +1,42 @@
+[
+    {
+        "id": "matrices-automotriz",
+        "title": "Matrices para Industria Automotriz",
+        "category": "Producción Industrial",
+        "description": "Reducción de costos en la fabricación de moldes mediante impresión 3D de alta resistencia.",
+        "challenge": "El cliente necesitaba fabricar matrices de validación complejas en tiempos récord para evitar retrasos en la línea de montaje.",
+        "solution": "Impresión 3D FDM con polímeros técnicos de alta resistencia térmica y mecánica.",
+        "result": "Disminución del 60% en costos de prototipado y entrega en 48hs.",
+        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+        "id": "maquinaria-agricola",
+        "title": "Prototipado Maquinaria Agrícola",
+        "category": "Gran Formato",
+        "description": "Validación de ergonomía y encastre en piezas de gran formato antes de la producción en acero.",
+        "challenge": "Validar el diseño de cabinas y componentes externos que requieren gran volumen y precisión.",
+        "solution": "Impresión de gran formato en un solo bloque, eliminando uniones débiles.",
+        "result": "Validación ergonómica 1:1 sin necesidad de fabricar piezas metálicas costosas.",
+        "image": "https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+        "id": "repuestos-industriales",
+        "title": "Repuestos Críticos en Planta",
+        "category": "Mantenimiento Industrial",
+        "description": "Fabricación on-demand de engranajes técnicos para evitar paradas de línea.",
+        "challenge": "Faltante de repuestos técnicos importados con tiempos de espera mayores a 60 días.",
+        "solution": "Ingeniería inversa mediante escaneado 3D y fabricación en Nylon reforzado.",
+        "result": "Reemplazo funcional instalado en 24hs, evitando pérdidas millonarias.",
+        "image": "https://images.unsplash.com/photo-1565034946487-0d7150da900c?auto=format&fit=crop&q=80&w=1200"
+    },
+    {
+        "id": "ingenieria-medica",
+        "title": "Modelado para Ingeniería Médica",
+        "category": "Resina Técnica",
+        "description": "Desarrollo de piezas a medida con precisión micrométrica en resina técnica.",
+        "challenge": "Necesidad de piezas biocompatibles y con geometrías internas ultra complejas.",
+        "solution": "Impresión en Resina SLA de alta definición y post-procesado grado quirúrgico.",
+        "result": "Precisión de +/- 0.05mm en componentes de uso clínico.",
+        "image": "https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=1200"
+    }
+]

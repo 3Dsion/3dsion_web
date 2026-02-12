@@ -1,0 +1,77 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { CheckCircle2, Award, Zap, Users } from 'lucide-react';
+
+const ValueProp = () => {
+    const whyUs = [
+        { title: "Experiencia Técnica", desc: "27 años en el rubro industrial garantizan que cada pieza sea funcional.", icon: Award },
+        { title: "Calidad Industrial", desc: "Materiales de alta performance para piezas de uso final, no solo maquetas.", icon: Zap },
+        { title: "Versatilidad", desc: "Dominio de múltiples tecnologías (FDM, Resina, Escaneado) para cada proyecto.", icon: CheckCircle2 },
+        { title: "Agilidad y Escala", desc: "Capacidad de producir desde un prototipo único hasta series cortas.", icon: Users },
+    ];
+
+    return (
+        <section className="py-24 bg-black">
+            <div className="container mx-auto px-6">
+                {/* Pilar 1: Por qué nosotros */}
+                <div className="mb-24">
+                    <div className="text-center mb-16">
+                        <h2 className="text-3xl md:text-5xl font-bold mb-4">¿Por qué trabajar con 3Dsion?</h2>
+                        <div className="h-1 w-20 bg-primary mx-auto"></div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {whyUs.map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className="p-8 bg-[#0d0d0d] border border-white/5 rounded-2xl hover:border-primary/30 transition-all text-center group"
+                            >
+                                <item.icon className="mx-auto text-primary mb-6 group-hover:scale-110 transition-transform" size={40} />
+                                <h4 className="text-lg font-bold mb-3">{item.title}</h4>
+                                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Pilar 2: Qué vas a encontrar */}
+                <div className="bg-primary/5 border border-primary/20 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-20 overflow-hidden relative">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px]"></div>
+
+                    <div className="relative z-10 flex flex-col lg:flex-row gap-16">
+                        <div className="lg:w-1/2">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-8">¿Qué vas a encontrar en 3DSION?</h2>
+                            <p className="text-gray-400 text-lg mb-10 leading-relaxed uppercase tracking-tighter italic">
+                                Criterio técnico aplicado a cada milímetro de tu proyecto.
+                            </p>
+                            <a href="https://wa.me/541176211242" className="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-primary/20 hover:bg-primary-dark transition-all">
+                                INICIAR MI PROYECTO
+                            </a>
+                        </div>
+
+                        <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            {[
+                                { t: "Soluciones a medida", d: "No vendemos impresión, vendemos la respuesta técnica que tu proyecto necesita." },
+                                { t: "Asesoría Profesional", d: "Acompañamiento desde la idea hasta la pieza final, optimizando cada paso." },
+                                { t: "Rigor Industrial", d: "Tolerancias precisas y materiales validados para uso en planta." },
+                                { t: "Tecnología de Punta", d: "Acceso a las mejores máquinas para resultados excepcionales." }
+                            ].map((val, i) => (
+                                <div key={i} className="space-y-2">
+                                    <div className="w-8 h-[2px] bg-primary"></div>
+                                    <h4 className="font-bold text-white uppercase tracking-wider text-sm">{val.t}</h4>
+                                    <p className="text-gray-500 text-xs leading-relaxed">{val.d}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default ValueProp;
