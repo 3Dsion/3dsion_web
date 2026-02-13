@@ -7,14 +7,59 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #0d0d0d;
+  color-scheme: light;
+  color: #111827;
+  background-color: #ffffff;
+
+  /* VARIABLES DE COLOR PARA SECCIONES (Editá acá los colores) */
+  --bg-solutions: #e8f0ff;
+  /* Fondo de la sección de Soluciones (Nuestras Soluciones) */
+  --bg-valueprop: #93b8ddbc;
+  /* Fondo de la sección Propuesta de Valor (¿Por qué elegirnos? / ¿Qué vas a encontrar?) */
+  --bg-process: #ffffff;
+  /* Fondo de la sección de Proceso (Nuestro Proceso) */
+  --bg-tech: #c9dff5;
+  /* Fondo de la sección Autoridad Técnica (Capacidades de Software e Ingeniería) */
+  --bg-projects: #ffffff;
+  /* Fondo de la sección de Proyectos (Casos de Éxito) */
+  --bg-contact: #f9fafb;
+  /* Fondo de la sección de Contacto (Formulario y Mapa) */
+  --bg-navbar: #e8f0ff;
+  /* Fondo del Menú al scrollear */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Vincular IDs directamente a las variables para que funcionen siempre */
+#navbar-scrolled {
+  background-color: var(--bg-navbar) !important;
+}
+
+#soluciones {
+  background-color: var(--bg-solutions);
+}
+
+#propuesta {
+  background-color: var(--bg-valueprop);
+}
+
+#proceso {
+  background-color: var(--bg-process);
+}
+
+#autoridad {
+  background-color: var(--bg-tech);
+}
+
+#proyectos {
+  background-color: var(--bg-projects);
+}
+
+#contactos {
+  background-color: var(--bg-contact);
 }
 
 body {

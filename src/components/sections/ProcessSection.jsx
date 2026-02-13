@@ -27,18 +27,20 @@ const ProcessSection = () => {
     ];
 
     return (
-        <section className="py-24 bg-gradient-to-b from-black to-secondary-dark/30">
-            <div className="container mx-auto px-6">
+        <section id="proceso" className="py-24 bg-process relative overflow-hidden">
+            {/* Background Decor */}
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100 via-white to-white opacity-60"></div>
+            <div className="container mx-auto px-6 relative z-10">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-6"
+                        className="text-3xl md:text-5xl font-bold mb-6 text-secondary-dark"
                     >
-                        Tu tranquilidad, <span className="text-primary italic">nuestro proceso</span>
+                        Nuestro Proceso
                     </motion.h2>
-                    <p className="text-gray-400 text-lg">
+                    <p className="text-gray-700 text-lg">
                         Desligate de los problemas técnicos. Ofrecemos soluciones llave en mano donde la precisión y el cumplimiento son nuestra prioridad absoluta.
                     </p>
                 </div>
@@ -55,13 +57,12 @@ const ProcessSection = () => {
                         >
                             {/* Connector line for desktop */}
                             {i < steps.length - 1 && (
-                                <div className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-[1px] bg-gradient-to-r from-primary/30 to-transparent z-0"></div>
+                                <div className="hidden lg:block absolute top-12 left-[60%] w-[80%] h-[1px] bg-gray-300 z-0"></div>
                             )}
 
-                            <div className="w-24 h-24 bg-secondary border border-white/10 rounded-full flex items-center justify-center mb-8 relative z-10 group-hover:border-primary transition-colors shadow-2xl">
+                            <div className="w-24 h-24 bg-white border border-gray-200 rounded-full flex items-center justify-center mb-8 relative z-10 group-hover:border-primary transition-colors shadow-lg">
                                 <step.icon className="text-primary group-hover:scale-110 transition-transform" size={40} />
                             </div>
-                            <h4 className="text-lg font-bold mb-3 uppercase tracking-wider">{step.title}</h4>
                             <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
                         </motion.div>
                     ))}

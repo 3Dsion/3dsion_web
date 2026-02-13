@@ -31,7 +31,7 @@ const TechAuthority = () => {
     ];
 
     return (
-        <section className="py-24 bg-[#0a0a0a] border-y border-white/5">
+        <section id="autoridad" className="py-24 bg-tech border-y border-gray-200">
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
                     {/* Text Content */}
@@ -41,8 +41,8 @@ const TechAuthority = () => {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-3xl md:text-5xl font-bold mb-6 italic text-primary">Ingeniería que trasciende la impresión 3D</h2>
-                            <p className="text-gray-400 text-lg leading-relaxed">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-secondary-dark">Autoridad Técnica</h2>
+                            <p className="text-gray-700 text-lg leading-relaxed">
                                 Con más de 27 años en el desarrollo industrial, nuestro aporte no se limita a fabricar piezas. Analizamos la materialidad, los procesos de manufactura tradicionales y el diseño mecánico integral para eliminar cualquier traba técnica en tu camino al producto final.
                             </p>
                         </motion.div>
@@ -50,12 +50,12 @@ const TechAuthority = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                             {capabilities.map((item, i) => (
                                 <div key={i} className="flex gap-4">
-                                    <div className="p-2 h-fit bg-primary/10 rounded-lg text-primary">
+                                    <div className="p-2 h-fit bg-primary/20 rounded-lg text-primary">
                                         <item.icon size={20} />
                                     </div>
                                     <div>
-                                        <h4 className="font-bold text-sm uppercase tracking-wide text-white">{item.title}</h4>
-                                        <p className="text-gray-500 text-xs mt-1">{item.desc}</p>
+                                        <h4 className="font-bold text-sm uppercase tracking-wide text-gray-800">{item.title}</h4>
+                                        <p className="text-gray-600 text-xs mt-1">{item.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -65,8 +65,8 @@ const TechAuthority = () => {
                     {/* Software Badge Cloud */}
                     <div className="relative">
                         <div className="absolute inset-0 bg-primary/10 blur-[100px] rounded-full"></div>
-                        <div className="relative bg-white/5 border border-white/10 p-10 rounded-[2rem] backdrop-blur-sm">
-                            <h3 className="text-xl font-bold mb-8 text-center uppercase tracking-widest text-gray-400">Software & Ecosistema</h3>
+                        <div className="relative bg-white border border-gray-200 p-10 rounded-[2rem] backdrop-blur-sm">
+                            <h3 className="text-xl font-bold mb-8 text-center uppercase tracking-widest text-gray-700">Software & Ecosistema</h3>
                             <div className="flex flex-wrap justify-center gap-4">
                                 {softwares.map((soft, i) => (
                                     <motion.span

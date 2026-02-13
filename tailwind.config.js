@@ -15,7 +15,15 @@ export default {
                 secondary: {
                     DEFAULT: '#1f2937',
                     dark: '#111827',
-                }
+                },
+                // FONDOS DE SECCIONES (Editables en src/index.css)
+                'solutions': 'var(--bg-solutions)',
+                'valueprop': 'var(--bg-valueprop)',
+                'process': 'var(--bg-process)',
+                'tech': 'var(--bg-tech)',
+                'projects': 'var(--bg-projects)',
+                'contact': 'var(--bg-contact)',
+                'nav-scrolled': 'var(--bg-navbar)',
             },
             fontFamily: {
                 sans: ['Inter', 'system-ui', 'sans-serif'],

@@ -19,29 +19,37 @@ const Hero = () => {
 
             {/* Overlay Content */}
             <div className="relative z-10 h-full flex items-center pt-20">
-                <div className="container mx-auto px-6">
+                <div className="container mx-auto px-6 md:px-12">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="max-w-3xl"
+                        className="max-w-4xl"
                     >
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6">
-                            Impresión 3D para <span className="text-primary italic">soluciones industriales</span>
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-xs font-bold uppercase tracking-widest mb-6">
+                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+                            I+D & MANUFACTURA
+                        </div>
+
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
+                            Impresión 3D <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Soluciones Reales.</span>
                         </h1>
-                        <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-light">
+
+                        <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-light border-l-2 border-primary/50 pl-6">
                             Diseño e impresión 3D aplicada a la industria. Desarrollo de moldes, matrices, prototipos funcionales y piezas técnicas para empresas.
                         </p>
-                        <div className="flex flex-col sm:flex-row gap-4">
+
+                        <div className="flex flex-col sm:flex-row gap-5">
                             <a
                                 href="#soluciones"
-                                className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-full font-bold text-center transition-all shadow-lg hover:shadow-primary/20"
+                                className="group relative overflow-hidden bg-primary hover:bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-center transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
                             >
-                                NUESTRAS SOLUCIONES
+                                <span className="relative z-10">SOLUCIONES</span>
                             </a>
                             <a
                                 href="#proyectos"
-                                className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-8 py-4 rounded-full font-bold text-center transition-all border border-white/20"
+                                className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-center transition-all border border-white/20 backdrop-blur-sm"
                             >
                                 CASOS DE ÉXITO
                             </a>

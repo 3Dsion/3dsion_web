@@ -11,7 +11,7 @@ const ValueProp = () => {
     ];
 
     return (
-        <section className="py-24 bg-black">
+        <section id="propuesta" className="py-24 bg-valueprop">
             <div className="container mx-auto px-6">
                 {/* Pilar 1: Por qué nosotros */}
                 <div className="mb-24">
@@ -28,11 +28,11 @@ const ValueProp = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: i * 0.1 }}
-                                className="p-8 bg-[#0d0d0d] border border-white/5 rounded-2xl hover:border-primary/30 transition-all text-center group"
+                                className="p-8 bg-white border border-gray-200 rounded-2xl hover:border-primary/50 transition-all text-center group shadow-md hover:shadow-xl"
                             >
                                 <item.icon className="mx-auto text-primary mb-6 group-hover:scale-110 transition-transform" size={40} />
-                                <h4 className="text-lg font-bold mb-3">{item.title}</h4>
-                                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                                <h4 className="text-lg font-bold mb-3 text-secondary-dark">{item.title}</h4>
+                                <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -44,8 +44,8 @@ const ValueProp = () => {
 
                     <div className="relative z-10 flex flex-col lg:flex-row gap-16">
                         <div className="lg:w-1/2">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8">¿Qué vas a encontrar en 3DSION?</h2>
-                            <p className="text-gray-400 text-lg mb-10 leading-relaxed uppercase tracking-tighter italic">
+                            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-secondary-dark">¿Qué vas a encontrar en 3DSION?</h2>
+                            <p className="text-gray-600 text-lg mb-10 leading-relaxed uppercase tracking-tighter italic">
                                 Criterio técnico aplicado a cada milímetro de tu proyecto.
                             </p>
                             <a href="https://wa.me/541176211242" className="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-primary/20 hover:bg-primary-dark transition-all">
@@ -62,7 +62,7 @@ const ValueProp = () => {
                             ].map((val, i) => (
                                 <div key={i} className="space-y-2">
                                     <div className="w-8 h-[2px] bg-primary"></div>
-                                    <h4 className="font-bold text-white uppercase tracking-wider text-sm">{val.t}</h4>
+                                    <h4 className="font-bold text-secondary-dark uppercase tracking-wider text-sm">{val.t}</h4>
                                     <p className="text-gray-500 text-xs leading-relaxed">{val.d}</p>
                                 </div>
                             ))}

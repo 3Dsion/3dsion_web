@@ -24,7 +24,10 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white py-4 shadow-lg' : 'bg-transparent py-4'}`}>
+        <nav
+            id={scrolled ? "navbar-scrolled" : undefined}
+            className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-nav-scrolled py-4 shadow-lg' : 'bg-transparent py-4'}`}
+        >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <div className="flex items-center">
                     <img src={logo} alt="3Dsion Logo" className={`h-8 lg:h-10 w-auto transition-all duration-300 ${scrolled ? '' : 'brightness-0 invert'}`} />
@@ -43,7 +46,7 @@ const Navbar = () => {
                     ))}
                     <a
                         href="https://wa.me/541176211242"
-                        className="bg-primary hover:bg-primary-dark text-white px-5 py-2 rounded-full text-sm font-bold flex items-center transition-all"
+                        className="bg-primary hover:bg-orange-500 text-white px-5 py-2 rounded-full text-sm font-bold flex items-center transition-all"
                     >
                         <Phone size={16} className="mr-2" />
                         COTIZAR

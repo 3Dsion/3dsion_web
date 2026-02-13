@@ -20,23 +20,33 @@ const ProjectCarousel = () => {
     }, []);
 
     return (
-        <section id="proyectos" className="py-24 bg-black overflow-hidden relative">
+        <section id="proyectos" className="py-24 bg-projects relative">
             <div className="container mx-auto px-6">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div>
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4">Casos de Éxito</h2>
-                        <div className="h-1 w-20 bg-primary mb-6"></div>
+                        <motion.h2
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            className="text-3xl md:text-5xl font-bold mb-4 text-secondary-dark"
+                        >
+                            Proyectos Destacados
+                        </motion.h2>
+                        <div className="h-1 w-20 bg-primary mb-4"></div>
+                        <p className="text-gray-600 max-w-md">
+                            Desde prototipos funcionales hasta piezas finales complejas.
+                        </p>
                     </div>
                     <div className="flex gap-4">
                         <button
                             onClick={prevSlide}
-                            className="p-3 rounded-full border border-white/10 hover:bg-primary transition-all group"
+                            className="p-3 rounded-full border border-gray-300 hover:bg-primary transition-all group text-gray-700 hover:text-white"
                         >
                             <ChevronLeft className="group-hover:scale-110 transition-transform" />
                         </button>
                         <button
                             onClick={nextSlide}
-                            className="p-3 rounded-full border border-white/10 hover:bg-primary transition-all group"
+                            className="p-3 rounded-full border border-gray-300 hover:bg-primary transition-all group text-gray-700 hover:text-white"
                         >
                             <ChevronRight className="group-hover:scale-110 transition-transform" />
                         </button>
@@ -70,28 +80,28 @@ const ProjectCarousel = () => {
 
                             {/* Content Side */}
                             <div className="w-full lg:w-2/5 space-y-6">
-                                <h3 className="text-3xl md:text-4xl font-bold leading-tight">
+                                <h3 className="text-3xl md:text-4xl font-bold leading-tight text-secondary-dark">
                                     {projectsData[currentIndex].title}
                                 </h3>
-                                <p className="text-gray-400 text-lg">
+                                <p className="text-gray-600 text-lg">
                                     {projectsData[currentIndex].description}
                                 </p>
 
                                 <div className="pt-6 space-y-8">
                                     <div>
                                         <h4 className="text-primary text-sm font-bold uppercase tracking-widest mb-2">Desafío</h4>
-                                        <p className="text-gray-300 text-sm leading-relaxed">{projectsData[currentIndex].challenge}</p>
+                                        <p className="text-gray-600 text-sm leading-relaxed">{projectsData[currentIndex].challenge}</p>
                                     </div>
                                     <div>
                                         <h4 className="text-primary text-sm font-bold uppercase tracking-widest mb-2">Resultado</h4>
-                                        <p className="text-white text-lg font-medium">{projectsData[currentIndex].result}</p>
+                                        <p className="text-secondary-dark text-lg font-medium">{projectsData[currentIndex].result}</p>
                                     </div>
                                 </div>
 
                                 <div className="pt-8">
                                     <a
                                         href={`/proyectos/${projectsData[currentIndex].id}`}
-                                        className="inline-flex items-center text-white hover:text-primary transition-colors font-bold group"
+                                        className="inline-flex items-center text-secondary-dark hover:text-primary transition-colors font-bold group"
                                     >
                                         VER DETALLE DEL CASO
                                         <ArrowRight size={20} className="ml-2 group-hover:translate-x-2 transition-transform" />

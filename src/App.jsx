@@ -5,7 +5,7 @@ import Nosotros from './pages/Nosotros';
 function App() {
     return (
         <Router>
-            <div className="min-h-screen bg-[#0d0d0d] text-white">
+            <div className="min-h-screen">
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/nosotros" element={<Nosotros />} />
