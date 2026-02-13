@@ -61,5 +61,6 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 
 ## 10. DOCUMENTACIÓN AUXILIAR
 - [Guía de Desarrollo Local](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_DESARROLLO.md): Instrucciones para iniciar el servidor y resolver problemas de red.
+- [Guía de Despliegue Hostinger](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_HOSTINGER.md): Pasos para el alojamiento final.
 - [GitHub Workflow](file:///e:/ANTIGRAVITY/3dsion_web/docs/GITHUB_WORKFLOW.md): Protocolo de commits y despliegue.
 - [Guía de Temas](file:///e:/ANTIGRAVITY/3dsion_web/docs/THEME_GUIDE.md): Estándares de color y estilo.
