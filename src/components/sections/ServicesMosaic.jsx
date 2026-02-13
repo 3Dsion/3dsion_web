@@ -1,7 +1,4 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import * as LucideIcons from 'lucide-react';
-import servicesData from '../../data/services.json';
+import SectionTitle from '../ui/SectionTitle';
 
 const ServicesMosaic = () => {
     return (
@@ -10,22 +7,15 @@ const ServicesMosaic = () => {
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 opacity-50"></div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-16">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-4 text-secondary-dark"
-                    >
-                        Nuestras Soluciones
-                    </motion.h2>
-                    <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: '80px' }}
-                        viewport={{ once: true }}
-                        className="h-1 bg-primary mx-auto mb-6"
-                    ></motion.div>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                <SectionTitle
+                    title="Nuestras"
+                    highlight="Soluciones"
+                    align="center"
+                    className="mb-16"
+                />
+
+                <div className="max-w-2xl mx-auto text-center -mt-8 mb-16">
+                    <p className="text-gray-600">
                         Combinamos tecnología de vanguardia con décadas de experiencia en ingeniería para resolver los desafíos de fabricación más complejos.
                     </p>
                 </div>

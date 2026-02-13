@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, Award, Zap, Users } from 'lucide-react';
+import SectionTitle from '../ui/SectionTitle';
+import Button from '../ui/Button';
 
 const ValueProp = () => {
     const whyUs = [
@@ -15,10 +17,11 @@ const ValueProp = () => {
             <div className="container mx-auto px-6">
                 {/* Pilar 1: Por qué nosotros */}
                 <div className="mb-24">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-5xl font-bold mb-4">¿Por qué trabajar con 3Dsion?</h2>
-                        <div className="h-1 w-20 bg-primary mx-auto"></div>
-                    </div>
+                    <SectionTitle
+                        title="¿Por qué trabajar con"
+                        highlight="3Dsion?"
+                        align="center"
+                    />
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                         {whyUs.map((item, i) => (
@@ -44,13 +47,17 @@ const ValueProp = () => {
 
                     <div className="relative z-10 flex flex-col lg:flex-row gap-16">
                         <div className="lg:w-1/2">
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8 text-secondary-dark">¿Qué vas a encontrar en 3DSION?</h2>
-                            <p className="text-gray-600 text-lg mb-10 leading-relaxed uppercase tracking-tighter italic">
+                            <SectionTitle
+                                title="¿Qué vas a encontrar en"
+                                highlight="3DSION?"
+                                className="mb-8"
+                            />
+                            <p className="text-gray-600 text-lg mb-10 leading-relaxed uppercase tracking-tighter italic border-l-4 border-primary pl-6 font-bold">
                                 Criterio técnico aplicado a cada milímetro de tu proyecto.
                             </p>
-                            <a href="https://wa.me/541176211242" className="inline-block bg-primary text-white px-10 py-4 rounded-full font-bold shadow-xl shadow-primary/20 hover:bg-primary-dark transition-all">
+                            <Button href="https://wa.me/541176211242" variant="primary">
                                 INICIAR MI PROYECTO
-                            </a>
+                            </Button>
                         </div>
 
                         <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">

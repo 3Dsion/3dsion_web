@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ShieldCheck, Cpu, DraftingCompass, PencilRuler } from 'lucide-react';
+import SectionTitle from '../ui/SectionTitle';
 
 const TechAuthority = () => {
     const capabilities = [
@@ -36,16 +37,20 @@ const TechAuthority = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
                     {/* Text Content */}
                     <div className="space-y-8">
-                        <motion.div
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
+                        <SectionTitle
+                            title="Autoridad"
+                            highlight="Técnica"
+                            className="mb-0"
+                        />
+
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
+                            className="text-gray-700 text-lg leading-relaxed"
                         >
-                            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-secondary-dark">Autoridad Técnica</h2>
-                            <p className="text-gray-700 text-lg leading-relaxed">
-                                Con más de 27 años en el desarrollo industrial, nuestro aporte no se limita a fabricar piezas. Analizamos la materialidad, los procesos de manufactura tradicionales y el diseño mecánico integral para eliminar cualquier traba técnica en tu camino al producto final.
-                            </p>
-                        </motion.div>
+                            Con más de 27 años en el desarrollo industrial, nuestro aporte no se limita a fabricar piezas. Analizamos la materialidad, los procesos de manufactura tradicionales y el diseño mecánico integral para eliminar cualquier traba técnica en tu camino al producto final.
+                        </motion.p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                             {capabilities.map((item, i) => (

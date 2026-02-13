@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ClipboardCheck, Handshake, ShieldAlert, TrendingUp } from 'lucide-react';
+import SectionTitle from '../ui/SectionTitle';
 
 const ProcessSection = () => {
     const steps = [
@@ -31,15 +32,13 @@ const ProcessSection = () => {
             {/* Background Decor */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-100 via-white to-white opacity-60"></div>
             <div className="container mx-auto px-6 relative z-10">
-                <div className="max-w-4xl mx-auto text-center mb-20">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-6 text-secondary-dark"
-                    >
-                        Nuestro Proceso
-                    </motion.h2>
+                <SectionTitle
+                    title="Nuestro"
+                    highlight="Proceso"
+                    align="center"
+                    className="mb-20"
+                />
+                <div className="max-w-4xl mx-auto -mt-16 text-center mb-16">
                     <p className="text-gray-700 text-lg">
                         Desligate de los problemas técnicos. Ofrecemos soluciones llave en mano donde la precisión y el cumplimiento son nuestra prioridad absoluta.
                     </p>
