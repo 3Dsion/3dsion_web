@@ -60,7 +60,12 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 - **Historial de Decisiones:** Si se descarta una tecnología o se cambia un criterio de diseño, se debe dejar constancia breve aquí para evitar retrocesos en sesiones futuras.
 
 ## 10. DOCUMENTACIÓN AUXILIAR
-- [Guía de Desarrollo Local](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_DESARROLLO.md): Instrucciones para iniciar el servidor y resolver problemas de red.
-- [Guía de Despliegue Hostinger](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_HOSTINGER.md): Pasos para el alojamiento final.
-- [GitHub Workflow](file:///e:/ANTIGRAVITY/3dsion_web/docs/GITHUB_WORKFLOW.md): Protocolo de commits y despliegue.
-- [Guía de Temas](file:///e:/ANTIGRAVITY/3dsion_web/docs/THEME_GUIDE.md): Estándares de color y estilo.
+
+Para facilitar la gestión del proyecto, se han creado las siguientes guías específicas:
+
+- 📖 [**Guía de Desarrollo Local**](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_DESARROLLO.md): Cómo correr el proyecto y solucionar errores.
+- 🛠️ [**Guía de Mantenimiento**](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_MANTENIMIENTO.md): Cómo actualizar datos, servicios y usar componentes UI.
+- 📋 [**Backlog de Tareas**](file:///e:/ANTIGRAVITY/3dsion_web/docs/BACKLOG.md): Lista de pedidos pendientes para el desarrollo.
+- 🚀 [**Guía de Despliegue Hostinger**](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_HOSTINGER.md): Pasos para subir la web a un servidor profesional.
+- 💾 [**GitHub Workflow**](file:///e:/ANTIGRAVITY/3dsion_web/docs/GITHUB_WORKFLOW.md): Protocolo de commits y despliegue.
+- 🎨 [**Guía de Temas**](file:///e:/ANTIGRAVITY/3dsion_web/docs/THEME_GUIDE.md): Estándares de color y estilo.
