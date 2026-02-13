@@ -44,13 +44,12 @@ const Navbar = () => {
                             {link.name}
                         </a>
                     ))}
-                    <a
-                        href="https://wa.me/541176211242"
-                        className="bg-primary hover:bg-orange-500 text-white px-5 py-2 rounded-full text-sm font-bold flex items-center transition-all"
+                    <button
+                        className="bg-primary/50 text-white/50 px-5 py-2 rounded-full text-sm font-bold flex items-center cursor-not-allowed"
+                        disabled
                     >
-                        <Phone size={16} className="mr-2" />
                         COTIZAR
-                    </a>
+                    </button>
                 </div>
 
                 {/* Mobile menu button */}
@@ -84,13 +83,12 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <a
-                                href="https://wa.me/541176211242"
-                                className="w-full bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center transition-all"
+                            <button
+                                className="w-full bg-primary/50 text-white/50 px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center cursor-not-allowed"
+                                disabled
                             >
-                                <Phone size={18} className="mr-2" />
-                                COTIZAR AHORA
-                            </a>
+                                COTIZAR
+                            </button>
                         </div>
                     </motion.div>
                 )}

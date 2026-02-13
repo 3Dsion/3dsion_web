@@ -14,7 +14,12 @@ const Footer = () => {
                             27 años transformando ideas en realidades industriales mediante diseño avanzado y fabricación aditiva.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-primary transition-colors">
+                            <a
+                                href="https://www.instagram.com/3dsion/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="p-2 bg-white/5 rounded-full hover:bg-primary transition-colors"
+                            >
                                 <Instagram size={20} />
                             </a>
                             <a href="#" className="p-2 bg-white/5 rounded-full hover:bg-primary transition-colors">
