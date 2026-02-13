@@ -4,6 +4,7 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 
 ## 1. INFORMACIÓN GENERAL
 - **Nombre del Proyecto:** 3Dsion Web.
+- **URL de Producción:** [https://3Dsion.github.io/3dsion_web/](https://3Dsion.github.io/3dsion_web/)
 - **Objetivo:** Presentar a 3Dsion como una autoridad técnica en ingeniería y fabricación aditiva (impresión 3D) para el sector industrial. Es una herramienta de ventas y posicionamiento.
 - **Usuario Objetivo:** Profesionales de la industria, responsables de mantenimiento, ingenieros de desarrollo y compras técnicas.
 - **Identidad de Marca:** 27 años de trayectoria en ingeniería (diseño mecánico, sheet metal) evolucionando hacia la tecnología 3D.
@@ -57,3 +58,8 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 - **Documento Vivo:** Este archivo DEBE ser actualizado ante cambios significativos en el stack, diseño o lógica de negocio.
 - **Protocolo de Actualización:** Cuando el usuario solicite "actualizar el contexto" o tras completar un hito de los `PRÓXIMOS PASOS`, el asistente debe revisar y editar este archivo para reflejar la nueva realidad del proyecto.
 - **Historial de Decisiones:** Si se descarta una tecnología o se cambia un criterio de diseño, se debe dejar constancia breve aquí para evitar retrocesos en sesiones futuras.
+
+## 10. DOCUMENTACIÓN AUXILIAR
+- [Guía de Desarrollo Local](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_DESARROLLO.md): Instrucciones para iniciar el servidor y resolver problemas de red.
+- [GitHub Workflow](file:///e:/ANTIGRAVITY/3dsion_web/docs/GITHUB_WORKFLOW.md): Protocolo de commits y despliegue.
+- [Guía de Temas](file:///e:/ANTIGRAVITY/3dsion_web/docs/THEME_GUIDE.md): Estándares de color y estilo.
