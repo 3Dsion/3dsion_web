@@ -1,3 +1,7 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import * as LucideIcons from 'lucide-react';
+import servicesData from '../../data/services.json';
 import SectionTitle from '../ui/SectionTitle';
 
 const ServicesMosaic = () => {
