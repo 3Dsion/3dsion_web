@@ -6,8 +6,10 @@ Este archivo es nuestro "buzón de pedidos". Podés editarlo desde GitHub (web o
 > [!TIP]
 > Agregá tus pedidos acá abajo siguiendo este formato. Yo los iré tomando uno por uno.
 
-- [ ] *Ejemplo: Optimizar las imágenes de la sección 'Nosotros'*
-- [ ] *Ejemplo: Cambiar el color de los iconos en el mosaico de servicios*
+- [ ] *verificar paleta de colores usada en los fondo de la pagina principal hero. Despues utilizar misma paleta para la pagina de cotizar. ahora esta muy oscura. no cambiar color de letras solo trabajar en los fondos.
+- [ ] *en el reaponsive de celular la flecha animada debajo de caso de exito que invita a seguir bajando deveria ser blanca, para que de vea mas , quiza ajustar un poquito el espesor.
+- [ ] *en responsive de celular no se ve todos los menues en el menu hamburguesa, solo el boton de cotizar , pero cuando hago click ahi no entra , esta como desactivado. lo estoy probando desde github.
+- [ ] *
 
 ---
 
