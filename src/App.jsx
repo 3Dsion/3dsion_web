@@ -4,7 +4,7 @@ import Nosotros from './pages/Nosotros';
 
 function App() {
     return (
-        <Router>
+        <Router basename={import.meta.env.BASE_URL}>
             <div className="min-h-screen">
                 <Routes>
                     <Route path="/" element={<Home />} />
