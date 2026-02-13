@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Button from '../ui/Button';
 import heroVideo from '../../assets/Banner-web-inicio.mp4';
 
 const Hero = () => {
@@ -41,18 +42,12 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-5">
-                            <a
-                                href="#soluciones"
-                                className="group relative overflow-hidden bg-primary hover:bg-orange-500 text-white px-8 py-4 rounded-full font-bold text-center transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]"
-                            >
-                                <span className="relative z-10">SOLUCIONES</span>
-                            </a>
-                            <a
-                                href="#proyectos"
-                                className="bg-transparent hover:bg-white/10 text-white px-8 py-4 rounded-full font-bold text-center transition-all border border-white/20 backdrop-blur-sm"
-                            >
+                            <Button href="#soluciones">
+                                SOLUCIONES
+                            </Button>
+                            <Button href="#proyectos" variant="secondary">
                                 CASOS DE ÉXITO
-                            </a>
+                            </Button>
                         </div>
                     </motion.div>
                 </div>
