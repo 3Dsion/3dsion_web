@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/Logo+3dsion (color).png';
 
 const Navbar = () => {
@@ -36,20 +37,20 @@ const Navbar = () => {
                 {/* Desktop Links */}
                 <div className="hidden lg:flex items-center space-x-8">
                     {navLinks.map((link) => (
-                        <a
+                        <Link
                             key={link.name}
-                            href={link.href}
+                            to={link.href}
                             className={`text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider ${scrolled ? 'text-secondary' : 'text-white'}`}
                         >
                             {link.name}
-                        </a>
+                        </Link>
                     ))}
-                    <button
-                        className="bg-primary/50 text-white/50 px-5 py-2 rounded-full text-sm font-bold flex items-center cursor-not-allowed"
-                        disabled
+                    <Link
+                        to="/cotizar"
+                        className="bg-primary hover:bg-orange-500 text-white px-5 py-2 rounded-full text-sm font-bold flex items-center transition-all"
                     >
                         COTIZAR
-                    </button>
+                    </Link>
                 </div>
 
                 {/* Mobile menu button */}
@@ -74,21 +75,22 @@ const Navbar = () => {
                     >
                         <div className="px-6 py-4 space-y-4">
                             {navLinks.map((link) => (
-                                <a
+                                <Link
                                     key={link.name}
-                                    href={link.href}
+                                    to={link.href}
                                     onClick={() => setIsOpen(false)}
                                     className="block text-base font-medium hover:text-primary transition-colors uppercase"
                                 >
                                     {link.name}
-                                </a>
+                                </Link>
                             ))}
-                            <button
-                                className="w-full bg-primary/50 text-white/50 px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center cursor-not-allowed"
-                                disabled
+                            <Link
+                                to="/cotizar"
+                                onClick={() => setIsOpen(false)}
+                                className="w-full bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center transition-all"
                             >
                                 COTIZAR
-                            </button>
+                            </Link>
                         </div>
                     </motion.div>
                 )}

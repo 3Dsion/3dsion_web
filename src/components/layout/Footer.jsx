@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Linkedin, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/Logo+3dsion (color).png';
 
 const Footer = () => {
@@ -64,10 +65,10 @@ const Footer = () => {
                     <div className="space-y-6">
                         <h4 className="text-lg font-bold">Explorar</h4>
                         <ul className="grid grid-cols-1 gap-2 text-gray-400 text-sm">
-                            <li><a href="#" className="hover:text-primary transition-colors">Soluciones</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Proyectos</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Nosotros</a></li>
-                            <li><a href="#" className="hover:text-primary transition-colors">Iniciativas</a></li>
+                            <li><Link to="/#soluciones" className="hover:text-primary transition-colors">Soluciones</Link></li>
+                            <li><Link to="/#proyectos" className="hover:text-primary transition-colors">Proyectos</Link></li>
+                            <li><Link to="/nosotros" className="hover:text-primary transition-colors">Nosotros</Link></li>
+                            <li><Link to="/cotizar" className="hover:text-primary transition-colors">Cotizar</Link></li>
                         </ul>
                     </div>
                 </div>

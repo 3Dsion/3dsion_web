@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Nosotros from './pages/Nosotros';
+import Cotizar from './pages/Cotizar';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 
 function App() {
-    // Limpiamos la barra final de BASE_URL para el enrutador
+    // Detectamos la ruta base (será / en local y /prueba/ en Hostinger)
     const basename = import.meta.env.BASE_URL.replace(/\/$/, "");
 
     return (
@@ -13,7 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/nosotros" element={<Nosotros />} />
-                    {/* Futuras rutas: /soluciones, /proyectos */}
+                    <Route path="/cotizar" element={<Cotizar />} />
                 </Routes>
                 <WhatsAppButton />
             </div>

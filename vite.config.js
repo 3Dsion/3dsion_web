@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/3dsion_web/' : '/',
+  base: mode === 'production' ? '/prueba/' : '/',
   plugins: [react()],
   resolve: {
     alias: {

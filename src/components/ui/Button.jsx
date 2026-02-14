@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { Link } from 'react-router-dom';
 
 const Button = ({
     children,
@@ -25,10 +26,20 @@ const Button = ({
     const combinedClasses = twMerge(baseStyles, variants[variant], sizes, className);
 
     if (href) {
+        const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:');
+
+        if (isExternal) {
+            return (
+                <a href={href} className={combinedClasses} {...props}>
+                    {children}
+                </a>
+            );
+        }
+
         return (
-            <a href={href} className={combinedClasses} {...props}>
+            <Link to={href} className={combinedClasses} {...props}>
                 {children}
-            </a>
+            </Link>
         );
     }
 

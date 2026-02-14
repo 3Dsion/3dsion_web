@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import { motion } from 'framer-motion';
@@ -25,6 +26,10 @@ const Nosotros = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
+            <Helmet>
+                <title>Sobre 3Dsion | Trayectoria en Ingeniería e Impresión 3D</title>
+                <meta name="description" content="Conocé la historia de 3Dsion: 27 años de evolución desde el diseño mecánico tradicional hasta la manufactura aditiva industrial." />
+            </Helmet>
             <Navbar />
             <main className="flex-grow pt-24">
                 {/* Hero Nosotros */}
