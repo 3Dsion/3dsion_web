@@ -65,9 +65,10 @@ const FileDropzone = ({ onFileSelect, selectedFile, onFileRemove }) => {
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
                 onClick={() => !selectedFile && fileInputRef.current.click()}
+                style={{ backgroundColor: isDragging || selectedFile ? 'var(--primary-light-opacity)' : 'var(--cotizar-card-inner-bg)' }}
                 className={`relative border-2 border-dashed rounded-3xl p-8 transition-all flex flex-col items-center justify-center min-h-[250px] cursor-pointer
-          ${isDragging ? 'border-primary bg-primary/5 scale-[1.02]' : 'border-white/10 hover:border-primary/50 bg-white/5'}
-          ${selectedFile ? 'border-primary/40 bg-primary/5' : ''}
+          ${isDragging ? 'border-primary scale-[1.02]' : 'border-white/10 hover:border-primary/50'}
+          ${selectedFile ? 'border-primary/40' : ''}
         `}
             >
                 <input
@@ -140,7 +141,10 @@ const FileDropzone = ({ onFileSelect, selectedFile, onFileRemove }) => {
             </div>
 
             {!selectedFile && (
-                <div className="bg-secondary-dark/30 border border-white/5 p-6 rounded-2xl space-y-4">
+                <div
+                    style={{ backgroundColor: 'var(--cotizar-card-inner-bg)' }}
+                    className="border border-white/5 p-6 rounded-2xl space-y-4"
+                >
                     <div className="flex items-start gap-3">
                         <AlertCircle size={18} className="text-primary shrink-0 mt-0.5" />
                         <div className="space-y-1">
@@ -158,7 +162,8 @@ const FileDropzone = ({ onFileSelect, selectedFile, onFileRemove }) => {
                             if (check) check.click();
                             document.getElementById('quote-form')?.scrollIntoView({ behavior: 'smooth' });
                         }}
-                        className="w-full py-3 px-4 bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl text-xs font-bold text-gray-300 transition-all uppercase tracking-wider"
+                        style={{ backgroundColor: 'var(--cotizar-card-inner-bg)' }}
+                        className="w-full py-3 px-4 hover:bg-white/10 border border-white/10 rounded-xl text-xs font-bold text-gray-300 transition-all uppercase tracking-wider"
                     >
                         SOLICITAR MODELADO / ASESORÍA
                     </button>

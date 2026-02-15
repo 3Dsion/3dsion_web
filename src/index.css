@@ -16,6 +16,8 @@
      ========================================================================== */
   --primary: #0056b3;
   /* Azul industrial principal */
+  --primary-light-opacity: rgba(0, 86, 179, 0.1);
+  /* Azul con opacidad para estados hover/drag */
   --secondary: #1f2937;
   /* Gris oscuro para elementos secundarios */
   --secondary-dark: #111827;
@@ -50,12 +52,17 @@
   /* Color de los títulos (h1, h4) */
   --cotizar-text-body: #ffffff;
   /* Color del texto de párrafos y lista */
+  /* --- Tarjetas y Contenedores --- */
   --cotizar-card-bg: rgb(89, 114, 214);
-  /* Fondo de los cuadros (Form/Dropzone) */
+  /* Fondo de los cuadros grandes (Form/Dropzone) */
   --cotizar-card-border: rgba(0, 0, 0, 0.1);
   /* Borde de los cuadros */
-  --cotizar-card-modeling-bg: rgba(43, 70, 99, 0.05);
-  /* Fondo de la card "No tengo el archivo" */
+  --cotizar-card-inner-bg: rgba(255, 255, 255, 0.05);
+  /* Fondo sutil dentro de los cuadros */
+
+  /* EL QUE BUSCABAS: Fondo de la franja "No tengo el archivo" */
+  --cotizar-modeling-bar-bg: rgba(43, 70, 99, 0.2);
+
   --cotizar-accent: var(--primary);
   /* Color de acento (Badges) */
 
