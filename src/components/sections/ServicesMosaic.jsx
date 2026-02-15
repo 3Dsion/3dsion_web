@@ -4,6 +4,8 @@ import * as LucideIcons from 'lucide-react';
 import servicesData from '../../data/services.json';
 import SectionTitle from '../ui/SectionTitle';
 
+import { Link } from 'react-router-dom';
+
 const ServicesMosaic = () => {
     return (
         <section id="soluciones" className="py-24 bg-solutions relative overflow-hidden">
@@ -37,17 +39,24 @@ const ServicesMosaic = () => {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ y: -5 }}
-                                className="group p-8 bg-gray-50 rounded-2xl border border-gray-200 hover:border-primary/50 transition-all hover:bg-white hover:shadow-xl"
+                                className="group relative"
                             >
-                                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                                    {IconComponent && <IconComponent className="text-primary group-hover:text-white transition-colors" size={28} />}
-                                </div>
-                                <h3 className="text-xl font-bold mb-4 tracking-tight text-secondary-dark group-hover:text-primary transition-colors">
-                                    {service.title}
-                                </h3>
-                                <p className="text-gray-600 text-sm leading-relaxed">
-                                    {service.description}
-                                </p>
+                                <Link to={service.link} className="block p-8 bg-gray-50 rounded-2xl border border-gray-200 hover:border-primary/50 transition-all hover:bg-white hover:shadow-xl h-full">
+                                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
+                                        {IconComponent && <IconComponent className="text-primary group-hover:text-white transition-colors" size={28} />}
+                                    </div>
+                                    <h3 className="text-xl font-bold mb-4 tracking-tight text-secondary-dark group-hover:text-primary transition-colors uppercase">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
+                                        {service.description}
+                                    </p>
+
+                                    <div className="mt-6 flex items-center text-primary text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity uppercase">
+                                        Ver detalles
+                                        <LucideIcons.ArrowRight size={14} className="ml-2" />
+                                    </div>
+                                </Link>
                             </motion.div>
                         );
                     })}

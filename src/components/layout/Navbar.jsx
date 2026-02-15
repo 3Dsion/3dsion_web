@@ -35,7 +35,7 @@ const Navbar = () => {
         {
             name: 'Soluciones',
             href: '/#soluciones',
-            dropdown: servicesData.map(s => ({ name: s.title, href: `/#${s.id}` }))
+            dropdown: servicesData.map(s => ({ name: s.title, href: s.link }))
         },
         { name: 'Casos de Éxito', href: '/#proyectos' },
         { name: 'Nosotros', href: '/nosotros' },

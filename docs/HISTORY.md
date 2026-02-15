@@ -14,6 +14,11 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
     *   Tipografía optimizada (text-xs + tracking-wider) para evitar distorsión visual.
     *   Sincronización automática con `services.json`.
 - **Modernización de Copys:** Se reemplazaron términos como "décadas" por "años" y "oficio" por "experiencia" para proyectar una imagen industrial moderna y ágil.
+- **Soluciones Dinámicas:** Se creó la página `/soluciones/ingenieria` con un diseño técnico profundo (proceso de co-creación, pilares de DFM y propuesta de valor industrial).
+- **Navegación Integral:** 
+    *   Se actualizó `services.json` con enlaces dinámicos.
+    *   Tanto el dropdown del Navbar como las tarjetas del mosaico ahora redirigen proactivamente a sus respectivas páginas o anclajes automáticamente.
+    *   Se añadió un indicador visual ("Ver detalles") con flecha animada en las tarjetas de soluciones al hacer hover.
 - **Gobernanza:** Se estableció la Home como **Plantilla Maestra** visual en `docs/PROJECT_CONTEXT.md` y se automatizó el protocolo de Git en `user_profile`.
 
 ---

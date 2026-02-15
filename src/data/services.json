@@ -3,36 +3,42 @@
         "id": "ingenieria",
         "title": "INGENIERÍA & CO-CREACIÓN",
         "description": "27 años de experiencia aplicados a tus ideas. Diseño orientado a fabricación (DFM).",
-        "icon": "Settings"
+        "icon": "Settings",
+        "link": "/soluciones/ingenieria"
     },
     {
         "id": "produccion",
         "title": "PRODUCCIÓN EN SERIE",
         "description": "Fabricación escalable de piezas finales y repuestos críticos. Calidad industrial sin necesidad de costosas matrices o moldes.",
-        "icon": "Factory"
+        "icon": "Factory",
+        "link": "/#produccion"
     },
     {
         "id": "formato",
         "title": "GRAN FORMATO",
         "description": "Impresión de gran escala con precisión milimétrica. Piezas técnicas de hasta medio metro en un solo bloque, sin uniones ni debilidades.",
-        "icon": "Expand"
+        "icon": "Expand",
+        "link": "/#formato"
     },
     {
         "id": "prototipado",
         "title": "PROTOTIPADO & VALIDACIÓN",
         "description": "Acelera el desarrollo de tus productos. Creamos prototipos funcionales en horas para validar diseño y ergonomía antes de la producción final.",
-        "icon": "Zap"
+        "icon": "Zap",
+        "link": "/#prototipado"
     },
     {
         "id": "modelado",
         "title": "MODELADO & DESARROLLO",
         "description": "Transformamos tus ideas o bocetos en modelos 3D optimizados. Especialistas en diseño paramétrico y optimización de piezas para fabricación aditiva.",
-        "icon": "Box"
+        "icon": "Box",
+        "link": "/#modelado"
     },
     {
         "id": "inversa",
         "title": "INGENIERÍA INVERSA",
         "description": "Recuperación y mejora de componentes existentes. Digitalizamos piezas físicas para su reproducción o rediseño técnico, eliminando la dependencia de repuestos importados.",
-        "icon": "RotateCw"
+        "icon": "RotateCw",
+        "link": "/#inversa"
     }
 ]
