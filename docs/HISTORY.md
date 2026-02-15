@@ -4,6 +4,20 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
 
 ---
 
+## 🛠️ Febrero 15, 2026: Optimización de Performance y UX de Identidad
+### Commit `b184401` - feat: optimización de video Hero, refactorización de sección Identidad y mejoras en el menú desplegable de Soluciones
+**Descripción de la implementación:**
+- **Performance Hero:** Se eliminaron filtros CSS (`grayscale`, `brightness`) del video de fondo para reducir la carga de GPU. Se activó aceleración por hardware (`will-change: transform`) y control de loop manual por JS para eliminar micro-tirones.
+- **Estructura Home:** Se creó `IdentitySection.jsx` extrayendo la tarjeta de valor de `ValueProp` para colocarla inmediatamente después del Hero, reforzando el impacto técnico inicial.
+- **Navbar 2.0:** Se implementó un menú desplegable dinámico para "Soluciones" con:
+    *   Highlight en gama naranja (identidad de logo).
+    *   Tipografía optimizada (text-xs + tracking-wider) para evitar distorsión visual.
+    *   Sincronización automática con `services.json`.
+- **Modernización de Copys:** Se reemplazaron términos como "décadas" por "años" y "oficio" por "experiencia" para proyectar una imagen industrial moderna y ágil.
+- **Gobernanza:** Se estableció la Home como **Plantilla Maestra** visual en `docs/PROJECT_CONTEXT.md` y se automatizó el protocolo de Git en `user_profile`.
+
+---
+
 ## 🛠️ Febrero 14-15, 2026: Refinamiento "Clean Tech" y UX Industrial
 
 ### Commit `79f171c` - Refinamiento estético Clean Tech en Cotizar, ajustes de bordes, degradados técnicos y animación de WhatsApp
