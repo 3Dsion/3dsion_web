@@ -9,15 +9,26 @@ const Hero = () => {
         <section className="relative h-screen w-full overflow-hidden">
             {/* Background Video */}
             <video
+                ref={(el) => {
+                    if (el) {
+                        el.onended = () => {
+                            el.currentTime = 0;
+                            el.play();
+                        };
+                    }
+                }}
                 autoPlay
-                loop
                 muted
                 playsInline
-                className="absolute top-0 left-0 w-full h-full object-cover z-0 grayscale-[0.3] brightness-[0.4]"
+                preload="auto"
+                className="absolute top-0 left-0 w-full h-full object-cover z-0 transition-opacity duration-700 [will-change:transform]"
             >
                 <source src={heroVideo} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
+
+            {/* Performance-optimized Overlay (replacing expensive CSS filters) */}
+            <div className="absolute top-0 left-0 w-full h-full z-[1] bg-black/50 bg-blend-overlay"></div>
 
             {/* Overlay Content */}
             <div className="relative z-10 h-full flex items-center pt-20">
@@ -38,7 +49,7 @@ const Hero = () => {
 
                         <h1 style={{ color: 'var(--hero-text-main)' }} className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 tracking-tight">
                             Impresión 3D <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Soluciones Reales.</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Soluciones Reales</span>
                         </h1>
 
                         <p style={{ color: 'var(--hero-text-main)', opacity: 0.8 }} className="text-lg md:text-xl mb-10 leading-relaxed max-w-2xl font-light border-l-2 border-primary/50 pl-6">

@@ -24,6 +24,7 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 - **Sincronización:** Datos como proyectos y servicios están desacoplados en archivos JSON.
 
 ## 4. DIRECCIÓN DE DISEÑO (Industrial Premium)
+- **Plantilla Maestra:** La **Home** es el estándar visual absoluto del proyecto. Cualquier nueva página o sección debe heredar su ADN: uso de espacios, tipografía, bordes redondeados industriales y sutileza en los degradados.
 - **Estética:** Limpia, técnica y modular. Inspirada en estética tipo "SolidOS".
 - **Color Principal:** Azul Industrial `primary: #0056b3` (configurado en `tailwind.config.js`).
 - **Fondos de Secciones:** Se definen en `:root` dentro de `src/index.css` (ej: `--bg-solutions`, `--bg-tech`). Esto permite cambios de ambiente rápidos sin tocar JSX.

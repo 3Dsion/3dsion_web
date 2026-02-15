@@ -1,32 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/Logo+3dsion (color).png';
+import servicesData from '../../data/services.json';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isMobileSolutionsOpen, setIsMobileSolutionsOpen] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
-            // Forzamos scrolled si estamos en /cotizar o si bajamos el scroll
             const isCotizar = location.pathname === '/cotizar';
             setScrolled(isCotizar || window.scrollY > 50);
         };
 
-        handleScroll(); // Ejecutar al montar y al cambiar de ruta
+        handleScroll();
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, [location.pathname]);
 
+    // Cerrar menús al cambiar de ruta
+    useEffect(() => {
+        setIsOpen(false);
+        setIsDropdownOpen(false);
+        setIsMobileSolutionsOpen(false);
+    }, [location]);
+
     const navLinks = [
         { name: 'Inicio', href: '/' },
-        { name: 'Soluciones', href: '/#soluciones' },
-        { name: 'Proyectos', href: '/#proyectos' },
+        {
+            name: 'Soluciones',
+            href: '/#soluciones',
+            dropdown: servicesData.map(s => ({ name: s.title, href: `/#${s.id}` }))
+        },
+        { name: 'Casos de Éxito', href: '/#proyectos' },
         { name: 'Nosotros', href: '/nosotros' },
-        { name: 'Contactos', href: '/#contactos' },
+        { name: 'Contacto', href: '/#contactos' },
     ];
 
     return (
@@ -42,13 +55,52 @@ const Navbar = () => {
                 {/* Desktop Links */}
                 <div className="hidden lg:flex items-center space-x-8">
                     {navLinks.map((link) => (
-                        <Link
+                        <div
                             key={link.name}
-                            to={link.href}
-                            className={`text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider ${scrolled ? 'text-secondary' : 'text-white'}`}
+                            className="relative group"
+                            onMouseEnter={() => link.dropdown && setIsDropdownOpen(true)}
+                            onMouseLeave={() => link.dropdown && setIsDropdownOpen(false)}
                         >
-                            {link.name}
-                        </Link>
+                            {link.dropdown ? (
+                                <button
+                                    className={`flex items-center gap-1 text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider ${scrolled ? 'text-secondary' : 'text-white'}`}
+                                >
+                                    {link.name}
+                                    <ChevronDown size={14} className={`transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                                </button>
+                            ) : (
+                                <Link
+                                    to={link.href}
+                                    className={`text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider ${scrolled ? 'text-secondary' : 'text-white'}`}
+                                >
+                                    {link.name}
+                                </Link>
+                            )}
+
+                            {/* Desktop Dropdown */}
+                            {link.dropdown && (
+                                <AnimatePresence>
+                                    {isDropdownOpen && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: 10 }}
+                                            className="absolute left-0 mt-2 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden py-2"
+                                        >
+                                            {link.dropdown.map((subItem) => (
+                                                <Link
+                                                    key={subItem.name}
+                                                    to={subItem.href}
+                                                    className="block px-6 py-3 text-xs font-bold text-secondary-dark hover:bg-orange-50 hover:text-orange-600 transition-all uppercase tracking-wider border-l-4 border-transparent hover:border-orange-500"
+                                                >
+                                                    {subItem.name}
+                                                </Link>
+                                            ))}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            )}
+                        </div>
                     ))}
                     <Link
                         to="/cotizar"
@@ -78,24 +130,60 @@ const Navbar = () => {
                         exit={{ opacity: 0, height: 0 }}
                         className="lg:hidden bg-secondary-dark border-t border-white/10"
                     >
-                        <div className="px-6 py-4 space-y-4">
+                        <div className="px-6 py-6 space-y-2">
                             {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    to={link.href}
-                                    onClick={() => setIsOpen(false)}
-                                    className="block text-base font-medium text-white hover:text-primary transition-colors uppercase py-2"
-                                >
-                                    {link.name}
-                                </Link>
+                                <div key={link.name}>
+                                    {link.dropdown ? (
+                                        <div>
+                                            <button
+                                                onClick={() => setIsMobileSolutionsOpen(!isMobileSolutionsOpen)}
+                                                className="w-full flex justify-between items-center text-base font-medium text-white hover:text-primary transition-colors uppercase py-3"
+                                            >
+                                                {link.name}
+                                                <ChevronDown size={20} className={`transition-transform duration-300 ${isMobileSolutionsOpen ? 'rotate-180' : ''}`} />
+                                            </button>
+                                            <AnimatePresence>
+                                                {isMobileSolutionsOpen && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, height: 0 }}
+                                                        animate={{ opacity: 1, height: 'auto' }}
+                                                        exit={{ opacity: 0, height: 0 }}
+                                                        className="pl-4 space-y-1 bg-white/5 rounded-xl mt-1 overflow-hidden"
+                                                    >
+                                                        {link.dropdown.map((subItem) => (
+                                                            <Link
+                                                                key={subItem.name}
+                                                                to={subItem.href}
+                                                                onClick={() => setIsOpen(false)}
+                                                                className="block py-3 px-4 text-xs font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-wider"
+                                                            >
+                                                                {subItem.name}
+                                                            </Link>
+                                                        ))}
+                                                    </motion.div>
+                                                )}
+                                            </AnimatePresence>
+                                        </div>
+                                    ) : (
+                                        <Link
+                                            to={link.href}
+                                            onClick={() => setIsOpen(false)}
+                                            className="block text-base font-medium text-white hover:text-primary transition-colors uppercase py-3"
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    )}
+                                </div>
                             ))}
-                            <Link
-                                to="/cotizar"
-                                onClick={() => setIsOpen(false)}
-                                className="w-full bg-primary hover:bg-orange-500 text-white px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center transition-all mt-4"
-                            >
-                                COTIZAR
-                            </Link>
+                            <div className="pt-4">
+                                <Link
+                                    to="/cotizar"
+                                    onClick={() => setIsOpen(false)}
+                                    className="w-full bg-primary hover:bg-orange-500 text-white px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center transition-all"
+                                >
+                                    COTIZAR
+                                </Link>
+                            </div>
                         </div>
                     </motion.div>
                 )}

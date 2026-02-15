@@ -2,13 +2,13 @@
     {
         "id": "ingenieria",
         "title": "INGENIERÍA & CO-CREACIÓN",
-        "description": "27 años de oficio aplicados a tus ideas. Diseño orientado a fabricación (DFM).",
+        "description": "27 años de experiencia aplicados a tus ideas. Diseño orientado a fabricación (DFM).",
         "icon": "Settings"
     },
     {
         "id": "produccion",
         "title": "PRODUCCIÓN EN SERIE",
-        "description": "Fabricación escalable de piezas finales y repuestos críticos. Calidad industrial sin necesidad de costosos matrices o moldes.",
+        "description": "Fabricación escalable de piezas finales y repuestos críticos. Calidad industrial sin necesidad de costosas matrices o moldes.",
         "icon": "Factory"
     },
     {

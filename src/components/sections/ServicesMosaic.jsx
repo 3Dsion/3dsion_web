@@ -20,7 +20,7 @@ const ServicesMosaic = () => {
 
                 <div className="max-w-2xl mx-auto text-center -mt-8 mb-16">
                     <p className="text-gray-600">
-                        Combinamos tecnología de vanguardia con décadas de experiencia en ingeniería para resolver los desafíos de fabricación más complejos.
+                        Combinamos tecnología de vanguardia con años de experiencia en ingeniería para resolver los desafíos de fabricación más complejos.
                     </p>
                 </div>
 
@@ -31,6 +31,7 @@ const ServicesMosaic = () => {
                         return (
                             <motion.div
                                 key={service.id}
+                                id={service.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}

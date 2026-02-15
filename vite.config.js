@@ -6,6 +6,13 @@ import path from 'path'
 export default defineConfig(({ mode }) => ({
   base: mode === 'production' ? '/prueba/' : '/',
   plugins: [react()],
+  server: {
+    warmup: {
+      clientFiles: [
+        './src/assets/Banner-web-inicio.mp4',
+      ],
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

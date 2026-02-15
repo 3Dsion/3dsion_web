@@ -4,6 +4,7 @@ import Navbar from '../components/layout/Navbar';
 // ... rest of imports
 import Footer from '../components/layout/Footer';
 import Hero from '../components/sections/Hero';
+import IdentitySection from '../components/sections/IdentitySection';
 import ServicesMosaic from '../components/sections/ServicesMosaic';
 import ProjectCarousel from '../components/sections/ProjectCarousel';
 import TechAuthority from '../components/sections/TechAuthority';
@@ -21,6 +22,7 @@ const Home = () => {
             <Navbar />
             <main className="flex-grow">
                 <Hero />
+                <IdentitySection />
                 <ServicesMosaic />
                 <TechAuthority />
                 <ProjectCarousel />
