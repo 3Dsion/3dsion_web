@@ -47,9 +47,9 @@ const Ingenieria = () => {
 
             <Navbar />
 
-            <main className="flex-grow pt-24">
+            <main className="flex-grow">
                 {/* Hero Sección */}
-                <section className="relative py-24 bg-secondary-dark overflow-hidden">
+                <section className="relative pt-32 pb-24 bg-secondary-dark overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full opacity-20">
                         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,#0056b3_0%,transparent_50%)]"></div>
                     </div>
