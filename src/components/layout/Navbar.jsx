@@ -15,7 +15,8 @@ const Navbar = () => {
     useEffect(() => {
         const handleScroll = () => {
             const isCotizar = location.pathname === '/cotizar';
-            setScrolled(isCotizar || window.scrollY > 50);
+            const isSolucion = location.pathname.startsWith('/soluciones/');
+            setScrolled(isCotizar || isSolucion || window.scrollY > 50);
         };
 
         handleScroll();

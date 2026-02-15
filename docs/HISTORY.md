@@ -19,6 +19,7 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
     *   Se actualizó `services.json` con enlaces dinámicos.
     *   Tanto el dropdown del Navbar como las tarjetas del mosaico ahora redirigen proactivamente a sus respectivas páginas o anclajes automáticamente.
     *   Se añadió un indicador visual ("Ver detalles") con flecha animada en las tarjetas de soluciones al hacer hover.
+- **UX de Navegación:** Se actualizó la lógica del Navbar para que permanezca en estado sólido (`scrolled`) en todas las páginas de soluciones, garantizando legibilidad y acceso inmediato al menú sobre fondos blancos.
 - **Gobernanza:** Se estableció la Home como **Plantilla Maestra** visual en `docs/PROJECT_CONTEXT.md` y se automatizó el protocolo de Git en `user_profile`.
 
 ---
