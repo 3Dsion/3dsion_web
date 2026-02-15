@@ -23,7 +23,7 @@ Este documento sirve como la "Verdad Única" para que cualquier sesión de IA o 
 ## 📌 Reglas de Oro para el Futuro
 - **Nuevas Páginas**: Siempre crear un bloque idéntico en `index.css` antes de codear el JSX.
 - **Comentarios**: Mantener la documentación en el CSS para que Rodrigo sepa qué controla cada cada variable.
-- **Interacción**: Rodrigo prefiere ser consultado proactivamente antes de cambios estructurales, con explicaciones breves del *por qué*.
+- **Interacción**: "Modo Agilidad Ejecutiva". El agente tiene autonomía para ejecutar comandos y cambios de archivos proactivamente. Rodrigo supervisa y valida directamente desde la interfaz.
 
 ---
 *Ultima actualización: 14 de Febrero, 2026 - Sesión de Refinamiento Estético e Institucionalización.*
