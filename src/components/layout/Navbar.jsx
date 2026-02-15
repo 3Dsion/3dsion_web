@@ -35,9 +35,9 @@ const Navbar = () => {
             className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-nav-scrolled py-4 shadow-lg' : 'bg-transparent py-4'}`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <div className="flex items-center">
+                <Link to="/" className="flex items-center">
                     <img src={logo} alt="3Dsion Logo" className={`h-8 lg:h-10 w-auto transition-all duration-300 ${scrolled ? '' : 'brightness-0 invert'}`} />
-                </div>
+                </Link>
 
                 {/* Desktop Links */}
                 <div className="hidden lg:flex items-center space-x-8">
