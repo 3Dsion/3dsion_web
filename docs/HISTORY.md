@@ -1,0 +1,55 @@
+# Registro Histórico de Cambios (Changelog)
+
+Este documento registra cronológicamente las implementaciones realizadas en el proyecto 3Dsion Web, cruzando los mensajes de Git con una descripción técnica detallada para que Rodrigo pueda auditar qué se tocó en cada paso.
+
+---
+
+## 🛠️ Febrero 14-15, 2026: Refinamiento "Clean Tech" y UX Industrial
+
+### Commit `79f171c` - Refinamiento estético Clean Tech en Cotizar, ajustes de bordes, degradados técnicos y animación de WhatsApp
+**Descripción de la implementación:**
+- **Página de Cotizar:**
+    - Se recalibró toda la página para una estética "Laboratorio Iluminado" (fondos blancos puros y sombras `shadow-xl`).
+    - **Matemática de Radios:** Se ajustaron los bordes de las tarjetas internas (`rounded-[2.1rem]`) para que sigan la curvatura exacta de la tarjeta externa (`rounded-[2.5rem]` con padding).
+    - **Dropzone:** Se aplicó borde `dashed` (punteado) permanente que se oscurece y cambia a azul primary en hover.
+    - **Jerarquía Visual:** Se unificaron los fondos de las tarjetas de formulario e información usando nuevas variables CSS.
+    - **Resplandor Técnico:** Se movió el degradado radial al contenedor `main` y se subió al 20% de altura para que fluya por detrás de las tarjetas sin cortes abruptos.
+- **WhatsApp:**
+    - Se redujo el icono un 10% dentro del círculo verde.
+    - Se implementó una animación de "doble latido" (dos pulsos rápidos y un reposo de 3 segundos) para mejorar el Call to Action.
+- **Hero:**
+    - Se añadió un icono de maletín al botón de "Casos de Éxito" y se configuró scroll suave nativo hacia `#proyectos`.
+
+### Commit `1a0a073` - feat: logo navbar link inicio
+**Descripción de la implementación:**
+- Se vinculó el logo del Navbar para que siempre redirija a la raíz `/`, mejorando la navegación básica.
+
+---
+
+## 🛠️ Febrero 13-14, 2026: Arquitectura y Deployment
+
+### Commit `fbc3f6c` - Refactorización de rutas para subcarpeta (Hostinger) y mejoras de UX en Cotizar
+**Descripción de la implementación:**
+- **Hostinger Ready:** Se ajustaron las rutas de la aplicación para funcionar correctamente dentro de una subcarpeta en el servidor.
+- **Navbar Inteligente:** Se implementó lógica para que el Navbar se vea siempre "scrolleado" (con fondo y logo sólido) en la página de Cotizar, asegurando legibilidad sobre el fondo blanco.
+- **UX Formulario:** Ajustes iniciales en el formulario de cotización para reflejar la identidad visual de la marca.
+
+### Commit `9f6dac8` - refactor: aplicar SectionTitle y Button en todas las secciones principales
+**Descripción de la implementación:**
+- **Estandarización:** Se reemplazaron botones y títulos genéricos por los componentes `Button` (con efectos de brillo) y `SectionTitle` (con resaltado en itálica/azul) en todo el sitio para asegurar coherencia visual.
+
+### Commit `f597742` - feat: unificación de estilos en index.css y sistema de tokens por página
+**Descripción de la implementación:**
+- **Institucionalización del CSS:** Se crearon los bloques de variables CSS (`:root`) divididos por secciones. Esto permite que Rodrigo cambie un color en el CSS y se actualice todo el sitio sin tocar el código React.
+
+---
+
+## 🛠️ Febrero 11-12, 2026: Inicio y Estructura Core
+
+### Commit `e04a392` - Agregada guía de GitHub y propuesta de arquitectura
+**Descripción de la implementación:**
+- Creación de documentación base para el flujo de trabajo colaborativo.
+- Definición de la estructura de carpetas `components/`, `pages/` y `assets/`.
+
+---
+*Este documento se actualiza automáticamente después de cada sesión importante.*
