@@ -42,7 +42,10 @@ const ValueProp = () => {
                 </div>
 
                 {/* Pilar 2: Qué vas a encontrar */}
-                <div className="bg-primary/5 border border-primary/20 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-20 overflow-hidden relative">
+                <div
+                    style={{ backgroundColor: 'var(--bg-valueprop-card)' }}
+                    className="border border-primary/20 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-20 overflow-hidden relative shadow-xl"
+                >
                     <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px]"></div>
 
                     <div className="relative z-10 flex flex-col lg:flex-row gap-16">
