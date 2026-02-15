@@ -11,21 +11,69 @@
   color: #111827;
   background-color: #ffffff;
 
-  /* VARIABLES DE COLOR PARA SECCIONES (Editá acá los colores) */
-  --bg-solutions: #e8f0ff;
-  /* Fondo de la sección de Soluciones (Nuestras Soluciones) */
-  --bg-valueprop: #93b8ddbc;
-  /* Fondo de la sección Propuesta de Valor (¿Por qué elegirnos? / ¿Qué vas a encontrar?) */
-  --bg-process: #ffffff;
-  /* Fondo de la sección de Proceso (Nuestro Proceso) */
-  --bg-tech: #c9dff5;
-  /* Fondo de la sección Autoridad Técnica (Capacidades de Software e Ingeniería) */
-  --bg-projects: #ffffff;
-  /* Fondo de la sección de Proyectos (Casos de Éxito) */
-  --bg-contact: #f9fafb;
-  /* Fondo de la sección de Contacto (Formulario y Mapa) */
+  /* ==========================================================================
+     1. PALETA GLOBAL (Colores base del sitio)
+     ========================================================================== */
+  --primary: #0056b3;
+  /* Azul industrial principal */
+  --secondary: #1f2937;
+  /* Gris oscuro para elementos secundarios */
+  --secondary-dark: #111827;
+  /* Casi negro para profundidad */
+
+  /* ==========================================================================
+     2. NAVEGACIÓN (Navbar)
+     ========================================================================== */
   --bg-navbar: #e8f0ff;
-  /* Fondo del Menú al scrollear */
+  /* Color del menú cuando haces scroll */
+
+  /* ==========================================================================
+     3. SECCIÓN HERO (Inicio de la página principal)
+     ========================================================================== */
+  --hero-text-main: #ffffff;
+  /* Color del texto principal (h1, p) */
+  --hero-text-accent: var(--primary);
+  /* Color para acentos o resaltados */
+  --hero-overlay-alpha: 0.4;
+  /* Opacidad del filtro sobre el video (0 a 1) */
+  --hero-card-bg: rgba(255, 255, 255, 0.1);
+  /* Fondo de cuadros/badges */
+  --hero-card-border: rgba(255, 255, 255, 0.2);
+  /* Borde de cuadros/badges */
+
+  /* ==========================================================================
+     4. PÁGINA DE COTIZACIÓN (Cotizar)
+     ========================================================================== */
+  --bg-cotizar: #cad4e8;
+  /* Fondo general de la página de cotización */
+  --cotizar-text-titles: #020202;
+  /* Color de los títulos (h1, h4) */
+  --cotizar-text-body: #ffffff;
+  /* Color del texto de párrafos y lista */
+  --cotizar-card-bg: rgb(89, 114, 214);
+  /* Fondo de los cuadros (Form/Dropzone) */
+  --cotizar-card-border: rgba(0, 0, 0, 0.1);
+  /* Borde de los cuadros */
+  --cotizar-card-modeling-bg: rgba(43, 70, 99, 0.05);
+  /* Fondo de la card "No tengo el archivo" */
+  --cotizar-accent: var(--primary);
+  /* Color de acento (Badges) */
+
+  /* ==========================================================================
+     5. FONDOS DE SECCIONES (Página de Inicio)
+     ========================================================================== */
+  --bg-solutions: #e8f0ff;
+  /* Fondo de "Nuestras Soluciones" */
+  --bg-valueprop: #93b8ddbc;
+  /* Fondo de "¿Por qué elegirnos?" */
+  --bg-process: #ffffff;
+  /* Fondo de "Nuestro Proceso" */
+  --bg-tech: #c9dff5;
+  /* Fondo de "Autoridad Técnica" */
+  --bg-projects: #ffffff;
+  /* Fondo de "Casos de Éxito" */
+  --bg-contact: #f9fafb;
+  /* Fondo de "Contacto" */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -60,6 +108,18 @@
 
 #contactos {
   background-color: var(--bg-contact);
+}
+
+#cotizar {
+  background-color: var(--bg-cotizar);
+  color: var(--cotizar-text-body);
+}
+
+#cotizar h1,
+#cotizar h2,
+#cotizar h3,
+#cotizar h4 {
+  color: var(--cotizar-text-titles);
 }
 
 body {

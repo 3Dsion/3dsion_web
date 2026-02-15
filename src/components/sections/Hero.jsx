@@ -27,17 +27,20 @@ const Hero = () => {
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         className="max-w-4xl"
                     >
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white/80 text-xs font-bold uppercase tracking-widest mb-6">
+                        <div
+                            style={{ backgroundColor: 'var(--hero-card-bg)', borderColor: 'var(--hero-card-border)' }}
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full backdrop-blur-md border text-white/80 text-xs font-bold uppercase tracking-widest mb-6"
+                        >
                             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
                             I+D & MANUFACTURA
                         </div>
 
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-8 tracking-tight">
+                        <h1 style={{ color: 'var(--hero-text-main)' }} className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 tracking-tight">
                             Impresión 3D <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Soluciones Reales.</span>
                         </h1>
 
-                        <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl font-light border-l-2 border-primary/50 pl-6">
+                        <p style={{ color: 'var(--hero-text-main)', opacity: 0.8 }} className="text-lg md:text-xl mb-10 leading-relaxed max-w-2xl font-light border-l-2 border-primary/50 pl-6">
                             Diseño e impresión 3D aplicada a la industria. Desarrollo de moldes, matrices, prototipos funcionales y piezas técnicas para empresas.
                         </p>
 
@@ -53,14 +56,13 @@ const Hero = () => {
                 </div>
             </div>
 
-            {/* Scroll Indicator */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.5, duration: 1 }}
-                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-white/50 animate-bounce"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-white animate-bounce"
             >
-                <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent mx-auto"></div>
+                <div className="w-[2px] h-12 bg-gradient-to-b from-white to-transparent mx-auto"></div>
             </motion.div>
         </section>
     );

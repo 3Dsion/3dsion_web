@@ -1,20 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/Logo+3dsion (color).png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            // Forzamos scrolled si estamos en /cotizar o si bajamos el scroll
+            const isCotizar = location.pathname === '/cotizar';
+            setScrolled(isCotizar || window.scrollY > 50);
         };
+
+        handleScroll(); // Ejecutar al montar y al cambiar de ruta
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [location.pathname]);
 
     const navLinks = [
         { name: 'Inicio', href: '/' },
@@ -79,7 +84,7 @@ const Navbar = () => {
                                     key={link.name}
                                     to={link.href}
                                     onClick={() => setIsOpen(false)}
-                                    className="block text-base font-medium hover:text-primary transition-colors uppercase"
+                                    className="block text-base font-medium text-white hover:text-primary transition-colors uppercase py-2"
                                 >
                                     {link.name}
                                 </Link>
@@ -87,7 +92,7 @@ const Navbar = () => {
                             <Link
                                 to="/cotizar"
                                 onClick={() => setIsOpen(false)}
-                                className="w-full bg-primary hover:bg-primary-dark text-white px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center transition-all"
+                                className="w-full bg-primary hover:bg-orange-500 text-white px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center transition-all mt-4"
                             >
                                 COTIZAR
                             </Link>

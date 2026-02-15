@@ -67,59 +67,90 @@ const Cotizar = () => {
             </Helmet>
             <Navbar />
 
-            <main className="flex-grow pt-24 bg-black">
+            <main id="cotizar" className="flex-grow pt-24 relative overflow-hidden">
+                {/* Fondo suave basado en variables de index.css */}
+                <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
+                    <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[var(--bg-tech)] blur-[150px] rounded-full opacity-60"></div>
+                </div>
+
                 {/* Hero Section */}
-                <section className="py-20 relative overflow-hidden">
-                    <div className="absolute inset-x-0 top-0 h-96 bg-primary/10 blur-[120px] rounded-full -translate-y-1/2"></div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
+                <section className="py-20 relative z-10">
+                    <div className="container mx-auto px-6 text-center">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            style={{ backgroundColor: 'var(--cotizar-accent)', opacity: 0.1 }}
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6"
+                        >
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                            Presupuesto Técnico
+                        </motion.div>
+
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-4xl md:text-6xl font-bold mb-6"
+                            style={{ color: 'var(--cotizar-text-titles)' }}
+                            className="text-4xl md:text-6xl font-bold mb-6 tracking-tight"
                         >
                             Cotizá tu pieza <span className="text-primary italic">en minutos</span>
                         </motion.h1>
+
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto"
+                            style={{ color: 'var(--cotizar-text-body)' }}
+                            className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
                         >
-                            Subí tu STL y completá algunos datos. Analizamos tu proyecto manualmente para darte el mejor precio y tiempo de entrega.
+                            Subí tu archivo STL y recibí un análisis técnico detallado.
+                            Optimizamos la manufactura para darte el mejor resultado industrial.
                         </motion.p>
                     </div>
                 </section>
 
                 {/* Form Section */}
-                <section className="pb-32 container mx-auto px-6">
+                <section className="pb-32 container mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Left Column: Dropzone */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.3 }}
-                            className="lg:col-span-5 space-y-8"
+                            className="lg:col-span-12 xl:col-span-5 space-y-8"
                         >
-                            <FileDropzone
-                                onFileSelect={setSelectedFile}
-                                selectedFile={selectedFile}
-                                onFileRemove={() => setSelectedFile(null)}
-                            />
+                            <div
+                                style={{ backgroundColor: 'var(--cotizar-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
+                                className="border p-2 rounded-[2.2rem] shadow-xl backdrop-blur-md"
+                            >
+                                <FileDropzone
+                                    onFileSelect={setSelectedFile}
+                                    selectedFile={selectedFile}
+                                    onFileRemove={() => setSelectedFile(null)}
+                                />
+                            </div>
 
-                            <div className="bg-secondary-dark/50 border border-white/5 p-8 rounded-[2rem] space-y-4">
-                                <h4 className="font-bold text-white">¿Por qué necesitamos el archivo?</h4>
-                                <ul className="space-y-3 text-sm text-gray-400">
-                                    <li className="flex gap-3">
-                                        <span className="text-primary font-bold">•</span>
-                                        Cálculo preciso de volumen y material necesario.
+                            <div
+                                style={{ backgroundColor: 'var(--cotizar-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
+                                className="backdrop-blur-md border p-8 rounded-[2rem] space-y-6 shadow-lg relative overflow-hidden group"
+                            >
+                                <h4 style={{ color: 'var(--cotizar-text-titles)' }} className="font-bold flex items-center gap-3">
+                                    <div className="w-6 h-6 rounded-lg bg-primary/20 flex items-center justify-center">
+                                        <div className="w-2 h-2 rounded-full bg-primary"></div>
+                                    </div>
+                                    ¿Por qué el archivo?
+                                </h4>
+                                <ul style={{ color: 'var(--cotizar-text-body)' }} className="space-y-4 text-sm relative z-10">
+                                    <li className="flex gap-4">
+                                        <span className="text-primary font-bold">01.</span>
+                                        <p>Análisis exacto de geometría y volumen de material.</p>
                                     </li>
-                                    <li className="flex gap-3">
-                                        <span className="text-primary font-bold">•</span>
-                                        Detección de posibles fallas geométricas.
+                                    <li className="flex gap-4">
+                                        <span className="text-primary font-bold">02.</span>
+                                        <p>Detección de puntos de falla previos a la impresión.</p>
                                     </li>
-                                    <li className="flex gap-3">
-                                        <span className="text-primary font-bold">•</span>
-                                        Estimación de tiempo de impresión según calidad.
+                                    <li className="flex gap-4">
+                                        <span className="text-primary font-bold">03.</span>
+                                        <p>Optimización técnica para reducir costos y tiempos.</p>
                                     </li>
                                 </ul>
                             </div>
@@ -130,14 +161,19 @@ const Cotizar = () => {
                             initial={{ opacity: 0, x: 30 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="lg:col-span-7"
+                            className="lg:col-span-12 xl:col-span-7"
                         >
-                            <QuoteForm
-                                onSubmit={handleFormSubmit}
-                                isSubmitting={isSubmitting}
-                                isSuccess={isSuccess}
-                                hasFile={!!selectedFile}
-                            />
+                            <div
+                                style={{ backgroundColor: 'var(--cotizar-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
+                                className="border rounded-[2.5rem] p-1 shadow-2xl overflow-hidden backdrop-blur-sm"
+                            >
+                                <QuoteForm
+                                    onSubmit={handleFormSubmit}
+                                    isSubmitting={isSubmitting}
+                                    isSuccess={isSuccess}
+                                    hasFile={!!selectedFile}
+                                />
+                            </div>
                         </motion.div>
                     </div>
                 </section>

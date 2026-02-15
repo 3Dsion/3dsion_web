@@ -62,7 +62,10 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
     return (
         <form id="quote-form" onSubmit={handleSubmit} className="space-y-8 bg-white/5 border border-white/10 p-8 md:p-12 rounded-[2.5rem]">
             {/* Opción de Modelado */}
-            <div className="bg-primary/5 border border-primary/20 p-4 rounded-2xl flex items-center gap-4">
+            <div
+                style={{ backgroundColor: 'var(--cotizar-card-modeling-bg)' }}
+                className="border border-primary/20 p-4 rounded-2xl flex items-center gap-4"
+            >
                 <div className="flex items-center">
                     <input
                         id="needs-modeling"
