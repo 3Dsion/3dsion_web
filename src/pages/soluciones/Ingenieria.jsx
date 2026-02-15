@@ -60,7 +60,7 @@ const Ingenieria = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-primary bg-primary/10 rounded-full uppercase">
+                            <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-orange-500 bg-orange-500/10 rounded-full uppercase">
                                 Soluciones Técnicas
                             </span>
                             <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-tight">

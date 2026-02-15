@@ -20,6 +20,7 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
     *   Tanto el dropdown del Navbar como las tarjetas del mosaico ahora redirigen proactivamente a sus respectivas páginas o anclajes automáticamente.
     *   Se añadió un indicador visual ("Ver detalles") con flecha animada en las tarjetas de soluciones al hacer hover.
 - **UX de Navegación:** Se unificó el comportamiento sólido del Navbar y se ajustó el Banner principal de Ingeniería para que se extienda hasta el borde superior de la pantalla, fluyendo debajo de la barra de menú para una estética más integrada.
+    *   Se cambió el color del identificador "Soluciones Técnicas" a naranja (`text-orange-500`) para mejorar la legibilidad y coherencia con los elementos de acción/resaltado.
 - **Gobernanza:** Se estableció la Home como **Plantilla Maestra** visual en `docs/PROJECT_CONTEXT.md` y se automatizó el protocolo de Git en `user_profile`.
 
 ---
