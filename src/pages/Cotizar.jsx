@@ -68,21 +68,27 @@ const Cotizar = () => {
             <Navbar />
 
             <main id="cotizar" className="flex-grow pt-24 relative overflow-hidden">
-                {/* Fondo suave basado en variables de index.css */}
-                <div className="absolute inset-0 z-0 pointer-events-none opacity-40">
-                    <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[var(--bg-tech)] blur-[150px] rounded-full opacity-60"></div>
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                    <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[var(--bg-tech)] blur-[150px] rounded-full opacity-20"></div>
+                    {/* El resplandor que estabas editando, ahora en el fondo general para que no se corte */}
+                    <div
+                        className="absolute top-0 left-0 w-full h-[1000px]"
+                        style={{
+                            background: 'radial-gradient(circle at center 20%, rgba(229, 239, 252, 1) 0%, transparent 70%)'
+                        }}
+                    ></div>
                 </div>
 
                 {/* Hero Section */}
                 <section className="py-20 relative z-10">
+
                     <div className="container mx-auto px-6 text-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            style={{ backgroundColor: 'var(--cotizar-accent)', opacity: 0.1 }}
-                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6"
+                            className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 bg-gray-50/50 backdrop-blur-md text-secondary-dark text-xs font-bold uppercase tracking-widest mb-6 shadow-sm"
                         >
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                            <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
                             Presupuesto Técnico
                         </motion.div>
 
@@ -102,7 +108,7 @@ const Cotizar = () => {
                             style={{ color: 'var(--cotizar-text-body)' }}
                             className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
                         >
-                            Subí tu archivo STL y recibí un análisis técnico detallado.
+                            Subí tu <span className="text-primary font-bold">archivo 3D</span> y recibí un análisis técnico detallado.
                             Optimizamos la manufactura para darte el mejor resultado industrial.
                         </motion.p>
                     </div>
@@ -119,8 +125,8 @@ const Cotizar = () => {
                             className="lg:col-span-12 xl:col-span-5 space-y-8"
                         >
                             <div
-                                style={{ backgroundColor: 'var(--cotizar-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
-                                className="border p-2 rounded-[2.2rem] shadow-xl backdrop-blur-md"
+                                style={{ backgroundColor: 'var(--cotizar-dropzone-ext-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
+                                className="border p-2 rounded-[2.5rem] shadow-xl backdrop-blur-md"
                             >
                                 <FileDropzone
                                     onFileSelect={setSelectedFile}
@@ -130,12 +136,12 @@ const Cotizar = () => {
                             </div>
 
                             <div
-                                style={{ backgroundColor: 'var(--cotizar-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
-                                className="backdrop-blur-md border p-8 rounded-[2rem] space-y-6 shadow-lg relative overflow-hidden group"
+                                style={{ backgroundColor: 'var(--cotizar-form-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
+                                className="backdrop-blur-md border border-gray-200 p-8 rounded-[2rem] space-y-6 shadow-xl relative overflow-hidden group"
                             >
                                 <h4 style={{ color: 'var(--cotizar-text-titles)' }} className="font-bold flex items-center gap-3">
-                                    <div className="w-6 h-6 rounded-lg bg-primary/20 flex items-center justify-center">
-                                        <div className="w-2 h-2 rounded-full bg-primary"></div>
+                                    <div style={{ backgroundColor: 'rgba(255, 140, 0, 0.2)' }} className="w-6 h-6 rounded-lg border border-primary/40 flex items-center justify-center">
+                                        <div style={{ backgroundColor: 'var(--cotizar-accent)' }} className="w-2 h-2 rounded-full"></div>
                                     </div>
                                     ¿Por qué el archivo?
                                 </h4>
@@ -163,17 +169,12 @@ const Cotizar = () => {
                             transition={{ delay: 0.4 }}
                             className="lg:col-span-12 xl:col-span-7"
                         >
-                            <div
-                                style={{ backgroundColor: 'var(--cotizar-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
-                                className="border rounded-[2.5rem] p-1 shadow-2xl overflow-hidden backdrop-blur-sm"
-                            >
-                                <QuoteForm
-                                    onSubmit={handleFormSubmit}
-                                    isSubmitting={isSubmitting}
-                                    isSuccess={isSuccess}
-                                    hasFile={!!selectedFile}
-                                />
-                            </div>
+                            <QuoteForm
+                                onSubmit={handleFormSubmit}
+                                isSubmitting={isSubmitting}
+                                isSuccess={isSuccess}
+                                hasFile={!!selectedFile}
+                            />
                         </motion.div>
                     </div>
                 </section>

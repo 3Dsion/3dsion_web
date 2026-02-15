@@ -27,8 +27,9 @@ const Button = ({
 
     if (href) {
         const isExternal = href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:');
+        const isHash = href.startsWith('#');
 
-        if (isExternal) {
+        if (isExternal || isHash) {
             return (
                 <a href={href} className={combinedClasses} {...props}>
                     {children}

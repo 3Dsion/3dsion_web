@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  scroll-behavior: smooth;
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -46,25 +47,28 @@
   /* ==========================================================================
      4. PÁGINA DE COTIZACIÓN (Cotizar)
      ========================================================================== */
-  --bg-cotizar: #887b6e;
-  /* Fondo general de la página de cotización */
-  --cotizar-text-titles: #020202;
-  /* Color de los títulos (h1, h4) */
-  --cotizar-text-body: #ffffff;
-  /* Color del texto de párrafos y lista */
+  --bg-cotizar: #ffffff;
+  /* Blanco Puro (Igual a Home) */
+  --cotizar-text-titles: #001f3f;
+  /* Navy Blue (Fiel a Home) */
+  --cotizar-text-body: #4b5563;
+  /* Gris suave (gray-600 fiel a Home) */
   /* --- Tarjetas y Contenedores --- */
-  --cotizar-card-bg: #5972d6;
-  /* Fondo de los cuadros grandes (Form/Dropzone) */
-  --cotizar-card-border: #0000001a;
-  /* Borde de los cuadros */
-  --cotizar-card-inner-bg: #ffffff0d;
-  /* Fondo sutil dentro de los cuadros */
+  --cotizar-card-bg: #e8eefb;
+  --cotizar-form-card-bg: #d4dff6;
+  --cotizar-dropzone-ext-card-bg: #d4dff6;
+  /* Blanco Puro */
+  --cotizar-card-border: #e5e7eb;
+  /* Gris suave (gray-200) */
+  --cotizar-card-inner-bg: #f9fafb;
+  /* Gris ultra-claro para inputs/zonas internas */
 
-  /* EL QUE BUSCABAS: Fondo de la franja "No tengo el archivo" */
+  /* Fondo de la franja "No tengo el archivo 3D" en FileDropzone */
+  --cotizar-no-file-card-bg: #d4dff6;
   --cotizar-modeling-bar-bg: #121b2433;
 
-  --cotizar-accent: var(--primary);
-  /* Color de acento (Badges) */
+  --cotizar-accent: #FF8C00;
+  /* Naranja Vibrante (Fiel a solicitud) */
 
   /* ==========================================================================
      5. FONDOS DE SECCIONES (Página de Inicio)
@@ -73,6 +77,8 @@
   /* Fondo de "Nuestras Soluciones" */
   --bg-valueprop: #93b8ddbc;
   /* Fondo de "¿Por qué elegirnos?" */
+  --bg-valueprop-card: #ffffff;
+  /* Fondo de la card interna "¿Qué vas a encontrar?" */
   --bg-process: #ffffff;
   /* Fondo de "Nuestro Proceso" */
   --bg-tech: #c9dff5;

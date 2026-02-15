@@ -63,8 +63,8 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
         <form
             id="quote-form"
             onSubmit={handleSubmit}
-            style={{ backgroundColor: 'var(--cotizar-card-inner-bg)' }}
-            className="space-y-8 border border-white/10 p-8 md:p-12 rounded-[2.5rem]"
+            style={{ backgroundColor: 'var(--cotizar-form-card-bg)' }}
+            className="space-y-8 border border-gray-200 p-8 md:p-12 rounded-[2.5rem] shadow-xl"
         >
             {/* Opción de Modelado */}
             <div
@@ -81,7 +81,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                         className="w-5 h-5 accent-primary bg-black border-white/10 rounded cursor-pointer"
                     />
                 </div>
-                <label htmlFor="needs-modeling" className="text-sm font-medium text-gray-200 cursor-pointer select-none">
+                <label htmlFor="needs-modeling" className="text-sm font-medium text-gray-700 cursor-pointer select-none">
                     No tengo el archivo / Necesito servicio de modelado 3D o asesoría técnica
                 </label>
             </div>
@@ -92,7 +92,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                     <h4 className="text-primary font-bold uppercase tracking-widest text-xs">Datos de Contacto</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-300 ml-1">Nombre completo *</label>
+                            <label className="text-sm font-medium text-gray-700 ml-1">Nombre completo *</label>
                             <input
                                 required
                                 type="text"
@@ -100,11 +100,11 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                                 value={formData.nombre}
                                 onChange={handleChange}
                                 placeholder="Ej: Juan Pérez"
-                                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all text-secondary-dark"
                             />
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-300 ml-1">Email *</label>
+                            <label className="text-sm font-medium text-gray-700 ml-1">Email *</label>
                             <input
                                 required
                                 type="email"
@@ -112,19 +112,19 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                                 value={formData.email}
                                 onChange={handleChange}
                                 placeholder="juan@empresa.com"
-                                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all text-secondary-dark"
                             />
                         </div>
                     </div>
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-gray-300 ml-1">Teléfono (opcional)</label>
+                        <label className="text-sm font-medium text-gray-700 ml-1">Teléfono (opcional)</label>
                         <input
                             type="tel"
                             name="telefono"
                             value={formData.telefono}
                             onChange={handleChange}
                             placeholder="Ej: +54 9 11 ..."
-                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all"
+                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all text-secondary-dark"
                         />
                     </div>
                 </div>
@@ -137,7 +137,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-300 ml-1 flex items-center">
+                            <label className="text-sm font-medium text-gray-700 ml-1 flex items-center">
                                 Material
                                 <QuoteTooltip text="Define resistencia/temperatura/uso. Si no sabés, te asesoramos." />
                             </label>
@@ -146,7 +146,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                                 required={!isModelingOnly}
                                 value={formData.material}
                                 onChange={handleChange}
-                                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer text-secondary-dark"
                             >
                                 <option value="">Seleccionar material</option>
                                 <option value="PLA">PLA (Estándar/Decorativo)</option>
@@ -157,7 +157,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                             </select>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-300 ml-1 flex items-center">
+                            <label className="text-sm font-medium text-gray-700 ml-1 flex items-center">
                                 Calidad
                                 <QuoteTooltip text="Más calidad = más tiempo de impresión y mayor costo." />
                             </label>
@@ -166,7 +166,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                                 required={!isModelingOnly}
                                 value={formData.calidad}
                                 onChange={handleChange}
-                                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer text-secondary-dark"
                             >
                                 <option value="">Seleccionar calidad</option>
                                 <option value="Económica">Económica (Prototipo rápido)</option>
@@ -176,7 +176,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                             </select>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-300 ml-1 flex items-center">
+                            <label className="text-sm font-medium text-gray-700 ml-1 flex items-center">
                                 Tamaño aprox.
                                 <QuoteTooltip text="Si no sabés, lo analizamos desde el archivo STL." />
                             </label>
@@ -185,7 +185,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                                 required={!isModelingOnly}
                                 value={formData.tamano}
                                 onChange={handleChange}
-                                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer text-secondary-dark"
                             >
                                 <option value="">Seleccionar tamaño</option>
                                 <option value="Pequeño">Pequeño (&lt;10cm)</option>
@@ -195,7 +195,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                             </select>
                         </div>
                         <div className="space-y-2">
-                            <label className="text-sm font-medium text-gray-300 ml-1 flex items-center">
+                            <label className="text-sm font-medium text-gray-700 ml-1 flex items-center">
                                 Uso de la pieza
                                 <QuoteTooltip text="Nos ayuda a elegir material y configuración." />
                             </label>
@@ -204,7 +204,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                                 required={!isModelingOnly}
                                 value={formData.uso}
                                 onChange={handleChange}
-                                className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all appearance-none cursor-pointer text-secondary-dark"
                             >
                                 <option value="">Seleccionar uso</option>
                                 <option value="Decorativo">Decorativo</option>
@@ -216,7 +216,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                         </div>
                     </div>
                     <div className="space-y-2">
-                        <label className="text-sm font-medium text-gray-300 ml-1">Cantidad *</label>
+                        <label className="text-sm font-medium text-gray-700 ml-1">Cantidad *</label>
                         <input
                             required
                             type="number"
@@ -224,20 +224,20 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                             name="cantidad"
                             value={formData.cantidad}
                             onChange={handleChange}
-                            className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all"
+                            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all text-secondary-dark"
                         />
                     </div>
                 </div>
 
                 <div className="space-y-2 md:col-span-2 pt-2">
-                    <label className="text-sm font-medium text-gray-300 ml-1">Comentarios / Descripción del proyecto</label>
+                    <label className="text-sm font-medium text-gray-700 ml-1">Comentarios / Descripción del proyecto</label>
                     <textarea
                         name="comentarios"
                         value={formData.comentarios}
                         onChange={handleChange}
                         rows="4"
                         placeholder={isModelingOnly ? "Describinos tu idea, las medidas que necesitás o qué problema querés resolver..." : "Contanos más sobre tu proyecto o necesidades específicas..."}
-                        className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all resize-none"
+                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 focus:border-primary/50 outline-none transition-all resize-none text-secondary-dark"
                     ></textarea>
                 </div>
             </div>
@@ -246,8 +246,9 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                 <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-primary hover:bg-orange-600 disabled:bg-primary/50 text-white font-bold py-5 rounded-2xl flex items-center justify-center gap-3 transition-all shadow-xl shadow-primary/20 group"
+                    className="w-full bg-primary hover:bg-orange-500 disabled:bg-primary/50 text-white font-bold py-5 rounded-full flex items-center justify-center gap-3 transition-all shadow-[0_0_20px_rgba(0,86,179,0.3)] hover:shadow-[0_0_30px_rgba(249,115,22,0.5)] group"
                 >
+                    {/* Botón idéntico al de la Home (rounded-full + shadow naranja) */}
                     {isSubmitting ? (
                         <>
                             <Loader2 className="animate-spin" size={24} />
@@ -267,7 +268,7 @@ const QuoteForm = ({ onSubmit, isSubmitting, isSuccess, hasFile }) => {
                     }
                 </p>
             </div>
-        </form>
+        </form >
     );
 };
 

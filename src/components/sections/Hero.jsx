@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../ui/Button';
+import { Briefcase } from 'lucide-react';
 import heroVideo from '../../assets/Banner-web-inicio.mp4';
 
 const Hero = () => {
@@ -48,7 +49,8 @@ const Hero = () => {
                             <Button href="#soluciones">
                                 SOLUCIONES
                             </Button>
-                            <Button href="#proyectos" variant="secondary">
+                            <Button href="#proyectos" variant="secondary" className="gap-2">
+                                <Briefcase size={18} />
                                 CASOS DE ÉXITO
                             </Button>
                         </div>
