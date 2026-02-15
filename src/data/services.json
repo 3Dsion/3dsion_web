@@ -11,34 +11,34 @@
         "title": "PRODUCCIÓN EN SERIE",
         "description": "Fabricación escalable de piezas finales y repuestos críticos. Calidad industrial sin necesidad de costosas matrices o moldes.",
         "icon": "Factory",
-        "link": "/#produccion"
+        "link": "/soluciones/produccion"
     },
     {
         "id": "formato",
         "title": "GRAN FORMATO",
         "description": "Impresión de gran escala con precisión milimétrica. Piezas técnicas de hasta medio metro en un solo bloque, sin uniones ni debilidades.",
         "icon": "Expand",
-        "link": "/#formato"
+        "link": "/soluciones/gran-formato"
     },
     {
         "id": "prototipado",
         "title": "PROTOTIPADO & VALIDACIÓN",
         "description": "Acelera el desarrollo de tus productos. Creamos prototipos funcionales en horas para validar diseño y ergonomía antes de la producción final.",
         "icon": "Zap",
-        "link": "/#prototipado"
+        "link": "/soluciones/prototipado"
     },
     {
         "id": "modelado",
         "title": "MODELADO & DESARROLLO",
         "description": "Transformamos tus ideas o bocetos en modelos 3D optimizados. Especialistas en diseño paramétrico y optimización de piezas para fabricación aditiva.",
         "icon": "Box",
-        "link": "/#modelado"
+        "link": "/soluciones/modelado"
     },
     {
         "id": "inversa",
         "title": "INGENIERÍA INVERSA",
         "description": "Recuperación y mejora de componentes existentes. Digitalizamos piezas físicas para su reproducción o rediseño técnico, eliminando la dependencia de repuestos importados.",
         "icon": "RotateCw",
-        "link": "/#inversa"
+        "link": "/soluciones/ingenieria-inversa"
     }
 ]
