@@ -16,7 +16,7 @@
      ========================================================================== */
   --primary: #0056b3;
   /* Azul industrial principal */
-  --primary-light-opacity: rgba(0, 86, 179, 0.1);
+  --primary-light-opacity: #0056b31a;
   /* Azul con opacidad para estados hover/drag */
   --secondary: #1f2937;
   /* Gris oscuro para elementos secundarios */
@@ -38,30 +38,30 @@
   /* Color para acentos o resaltados */
   --hero-overlay-alpha: 0.4;
   /* Opacidad del filtro sobre el video (0 a 1) */
-  --hero-card-bg: rgba(255, 255, 255, 0.1);
+  --hero-card-bg: #ffffff1a;
   /* Fondo de cuadros/badges */
-  --hero-card-border: rgba(255, 255, 255, 0.2);
+  --hero-card-border: #ffffff33;
   /* Borde de cuadros/badges */
 
   /* ==========================================================================
      4. PÁGINA DE COTIZACIÓN (Cotizar)
      ========================================================================== */
-  --bg-cotizar: #cad4e8;
+  --bg-cotizar: #887b6e;
   /* Fondo general de la página de cotización */
   --cotizar-text-titles: #020202;
   /* Color de los títulos (h1, h4) */
   --cotizar-text-body: #ffffff;
   /* Color del texto de párrafos y lista */
   /* --- Tarjetas y Contenedores --- */
-  --cotizar-card-bg: rgb(89, 114, 214);
+  --cotizar-card-bg: #5972d6;
   /* Fondo de los cuadros grandes (Form/Dropzone) */
-  --cotizar-card-border: rgba(0, 0, 0, 0.1);
+  --cotizar-card-border: #0000001a;
   /* Borde de los cuadros */
-  --cotizar-card-inner-bg: rgba(255, 255, 255, 0.05);
+  --cotizar-card-inner-bg: #ffffff0d;
   /* Fondo sutil dentro de los cuadros */
 
   /* EL QUE BUSCABAS: Fondo de la franja "No tengo el archivo" */
-  --cotizar-modeling-bar-bg: rgba(43, 70, 99, 0.2);
+  --cotizar-modeling-bar-bg: #121b2433;
 
   --cotizar-accent: var(--primary);
   /* Color de acento (Badges) */
