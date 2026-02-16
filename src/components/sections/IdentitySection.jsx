@@ -6,7 +6,7 @@ import Button from '../ui/Button';
 const IdentitySection = () => {
     return (
         <section id="identidad" className="py-12 bg-white -mt-10 relative z-20">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-6 whatsapp-safe-zone">
                 <div
                     style={{ backgroundColor: 'var(--bg-valueprop-card)' }}
                     className="border border-primary/20 rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 lg:p-20 overflow-hidden relative shadow-2xl"

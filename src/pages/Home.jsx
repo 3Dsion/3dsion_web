@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 import Navbar from '../components/layout/Navbar';
 // ... rest of imports
 import Footer from '../components/layout/Footer';
@@ -13,6 +14,21 @@ import ProcessSection from '../components/sections/ProcessSection';
 import ContactSection from '../components/sections/ContactSection';
 
 const Home = () => {
+    const location = useLocation();
+
+    // Scroll suave a anclas (#contacto, #soluciones, etc.) cuando React Router navega con hash
+    useEffect(() => {
+        if (location.hash) {
+            const id = location.hash.replace('#', '');
+            // Pequeño delay para asegurar que el DOM esté renderizado
+            setTimeout(() => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }, [location]);
     return (
         <div className="flex flex-col min-h-screen">
             <Helmet>

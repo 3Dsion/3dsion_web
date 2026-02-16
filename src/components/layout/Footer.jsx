@@ -67,7 +67,7 @@ const Footer = () => {
                         <ul className="grid grid-cols-1 gap-2 text-gray-400 text-sm">
                             <li><Link to="/#soluciones" className="hover:text-primary transition-colors">Soluciones</Link></li>
                             <li><Link to="/#proyectos" className="hover:text-primary transition-colors">Casos de Éxito</Link></li>
-                            <li><Link to="/nosotros" className="hover:text-primary transition-colors">Nosotros</Link></li>
+                            <li><Link to="/trayectoria" className="hover:text-primary transition-colors">Trayectoria</Link></li>
                             <li><Link to="/cotizar" className="hover:text-primary transition-colors">Cotizar</Link></li>
                         </ul>
                     </div>

@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import * as LucideIcons from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import servicesData from '../../data/services.json';
 import SectionTitle from '../ui/SectionTitle';
-
 import { Link } from 'react-router-dom';
 
 const ServicesMosaic = () => {
@@ -26,9 +25,15 @@ const ServicesMosaic = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 whatsapp-safe-zone">
                     {servicesData.map((service, index) => {
-                        const IconComponent = LucideIcons[service.icon];
+                        // Intentar importar la imagen; si no existe, usar placeholder
+                        let bgImage = null;
+                        try {
+                            bgImage = new URL(`../../assets/${service.image}`, import.meta.url).href;
+                        } catch (e) {
+                            bgImage = null;
+                        }
 
                         return (
                             <motion.div
@@ -41,20 +46,38 @@ const ServicesMosaic = () => {
                                 whileHover={{ y: -5 }}
                                 className="group relative"
                             >
-                                <Link to={service.link} className="block p-8 bg-gray-50 rounded-2xl border border-gray-200 hover:border-primary/50 transition-all hover:bg-white hover:shadow-xl h-full">
-                                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                                        {IconComponent && <IconComponent className="text-primary group-hover:text-white transition-colors" size={28} />}
-                                    </div>
-                                    <h3 className="text-xl font-bold mb-4 tracking-tight text-secondary-dark group-hover:text-primary transition-colors uppercase">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-gray-600 text-sm leading-relaxed">
-                                        {service.description}
-                                    </p>
+                                <Link
+                                    to={service.link}
+                                    className="block rounded-2xl overflow-hidden h-full relative min-h-[280px]"
+                                >
+                                    {/* Imagen de fondo o Placeholder */}
+                                    {bgImage ? (
+                                        <div
+                                            className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                            style={{ backgroundImage: `url(${bgImage})` }}
+                                        ></div>
+                                    ) : (
+                                        /* Placeholder: {service.image} — Reemplazar cuando se cargue el asset */
+                                        <div className="absolute inset-0 bg-slate-100 animate-pulse flex items-center justify-center">
+                                            <span className="text-slate-400 text-xs font-medium tracking-wide">{service.image}</span>
+                                        </div>
+                                    )}
 
-                                    <div className="mt-6 flex items-center text-primary text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity uppercase">
-                                        Ver detalles
-                                        <LucideIcons.ArrowRight size={14} className="ml-2" />
+                                    {/* Overlay oscuro */}
+                                    <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors duration-300"></div>
+
+                                    {/* Contenido sobre overlay */}
+                                    <div className="relative z-10 p-8 flex flex-col justify-end h-full min-h-[280px]">
+                                        <h3 className="text-xl font-bold mb-3 tracking-tight text-white uppercase">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-gray-200 text-sm leading-relaxed">
+                                            {service.description}
+                                        </p>
+                                        <div className="mt-6 flex items-center text-primary text-xs font-bold tracking-widest opacity-0 group-hover:opacity-100 transition-opacity uppercase">
+                                            Ver detalles
+                                            <ArrowRight size={14} className="ml-2" />
+                                        </div>
                                     </div>
                                 </Link>
                             </motion.div>

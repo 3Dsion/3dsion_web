@@ -39,8 +39,8 @@ const Navbar = () => {
             dropdown: servicesData.map(s => ({ name: s.title, href: s.link }))
         },
         { name: 'Casos de Éxito', href: '/#proyectos' },
-        { name: 'Nosotros', href: '/nosotros' },
-        { name: 'Contacto', href: '/#contactos' },
+        { name: 'Trayectoria', href: '/trayectoria' },
+        { name: 'Contacto', href: '/#contacto' },
     ];
 
     return (

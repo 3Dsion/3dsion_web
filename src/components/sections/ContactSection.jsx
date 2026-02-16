@@ -19,7 +19,7 @@ const ContactInfoItem = ({ icon: Icon, label, value }) => (
 
 const ContactSection = () => {
     return (
-        <section id="contactos" className="py-24 bg-contact relative overflow-hidden">
+        <section id="contacto" className="py-24 bg-contact relative overflow-hidden">
             {/* Background Blobs */}
             <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl animate-blob"></div>

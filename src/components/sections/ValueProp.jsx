@@ -6,10 +6,10 @@ import Button from '../ui/Button';
 
 const ValueProp = () => {
     const whyUs = [
-        { title: "Experiencia Técnica", desc: "27 años en el rubro industrial garantizan que cada pieza sea funcional.", icon: Award },
-        { title: "Calidad Industrial", desc: "Materiales de alta performance para piezas de uso final, no solo maquetas.", icon: Zap },
-        { title: "Versatilidad", desc: "Dominio de múltiples tecnologías (FDM, Resina, Escaneado) para cada proyecto.", icon: CheckCircle2 },
-        { title: "Agilidad y Escala", desc: "Capacidad de producir desde un prototipo único hasta series cortas.", icon: Users },
+        { title: "Optimización de Procesos", desc: "Cada proyecto se analiza con criterio de ingeniería real para reducir tiempos de desarrollo y costos de producción.", icon: Award },
+        { title: "Alianza Técnica", desc: "3Dsion acompaña desde el concepto inicial hasta la pieza final, integrando diseño, materiales y fabricación.", icon: Zap },
+        { title: "Agilidad Operativa", desc: "Capacidad de respuesta inmediata: desde un prototipo único hasta series cortas listas para planta.", icon: CheckCircle2 },
+        { title: "ADN Industrial", desc: "Más de 27 años de experiencia en diseño mecánico y manufactura se traducen en cada pieza entregada.", icon: Users },
     ];
 
     return (
@@ -23,7 +23,7 @@ const ValueProp = () => {
                         align="center"
                     />
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 whatsapp-safe-zone">
                         {whyUs.map((item, i) => (
                             <motion.div
                                 key={i}

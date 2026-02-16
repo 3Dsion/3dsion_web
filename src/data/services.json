@@ -4,6 +4,7 @@
         "title": "INGENIERÍA & CO-CREACIÓN",
         "description": "27 años de experiencia aplicados a tus ideas. Diseño orientado a fabricación (DFM).",
         "icon": "Settings",
+        "image": "serv-ingenieria.webp",
         "link": "/soluciones/ingenieria"
     },
     {
@@ -11,6 +12,7 @@
         "title": "PRODUCCIÓN EN SERIE",
         "description": "Fabricación escalable de piezas finales y repuestos críticos. Calidad industrial sin necesidad de costosas matrices o moldes.",
         "icon": "Factory",
+        "image": "serv-serie.webp",
         "link": "/soluciones/produccion"
     },
     {
@@ -18,6 +20,7 @@
         "title": "GRAN FORMATO",
         "description": "Impresión de gran escala con precisión milimétrica. Piezas técnicas de hasta medio metro en un solo bloque, sin uniones ni debilidades.",
         "icon": "Expand",
+        "image": "serv-gran-formato.webp",
         "link": "/soluciones/gran-formato"
     },
     {
@@ -25,6 +28,7 @@
         "title": "PROTOTIPADO & VALIDACIÓN",
         "description": "Acelera el desarrollo de tus productos. Creamos prototipos funcionales en horas para validar diseño y ergonomía antes de la producción final.",
         "icon": "Zap",
+        "image": "serv-prototipado.webp",
         "link": "/soluciones/prototipado"
     },
     {
@@ -32,6 +36,7 @@
         "title": "MODELADO & DESARROLLO",
         "description": "Transformamos tus ideas o bocetos en modelos 3D optimizados. Especialistas en diseño paramétrico y optimización de piezas para fabricación aditiva.",
         "icon": "Box",
+        "image": "serv-modelado.webp",
         "link": "/soluciones/modelado"
     },
     {
@@ -39,6 +44,7 @@
         "title": "INGENIERÍA INVERSA",
         "description": "Recuperación y mejora de componentes existentes. Digitalizamos piezas físicas para su reproducción o rediseño técnico, eliminando la dependencia de repuestos importados.",
         "icon": "RotateCw",
+        "image": "serv-inversa.webp",
         "link": "/soluciones/ingenieria-inversa"
     }
 ]
