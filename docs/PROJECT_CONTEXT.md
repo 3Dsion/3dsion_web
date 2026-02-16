@@ -18,8 +18,8 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 - **Manejo de Metadatos:** React Helmet Async [PENDIENTE de optimización SEO].
 
 ## 3. ESTADO ACTUAL (Hito: Tema Claro Implementado)
-- **Home:** Completa. Secciones ensambladas: `Hero`, `ServicesMosaic`, `TechAuthority`, `ProjectCarousel`, `ValueProp`, `ProcessSection`, `ContactSection`.
-- **Nosotros:** Altamente avanzada. Incluye timeline histórico ("El Origen", "Transición", "Hoy"), pilares de valor y narrativa de 27 años de experiencia.
+- **Home:** Completa. Secciones ensambladas: `Hero`, `ServicesMosaic`, `TechAuthority`, `ProjectCarousel`, `ValueProp`, `ProcessSection`, `ContactSection` (rediseñada en v1.19).
+- **Trayectoria:** Página institucional con estructura de 3 actos, reemplazando a la antigua `Nosotros`.
 - **Tema:** El sitio fue convertido de Dark a **Tema Claro (Light)**. Los fondos de las secciones son controlados por variables CSS en `src/index.css`.
 - **Sincronización:** Datos como proyectos y servicios están desacoplados en archivos JSON.
 
@@ -51,9 +51,9 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 - **Nuevos Contenidos:** Antes de tocar el JSX de un carrusel o mosaico, verificar si se puede actualizar desde su respectivo archivo `.json` en `src/data`.
 
 ## 8. PRÓXIMOS PASOS
-1. **SEO:** Implementar meta-tags dinámicos con `react-helmet-async` usando palabras clave industriales.
-2. **Revisiones:** Validar la visualización del video de fondo en dispositivos iOS (low power mode puede bloquear el autoplay).
-3. **Página Nosotros:** Refinar estilos del timeline y asegurar que el botón de contacto en el footer/CTA funcione correctamente.
+1. **SEO:** Implementar meta-tags dinámicos con `react-helmet-async` usando palabras clave industriales [EN PROGRESO].
+2. **Revisiones:** Validar la visualización del video de fondo en dispositivos iOS (low power mode puede bloquear el autoplay) [CONFIRMADO].
+3. **Página Trayectoria:** Cargar assets finales para reemplazar placeholders.
 
 ## 9. MANTENIMIENTO DEL DOCUMENTO
 - **Documento Vivo:** Este archivo DEBE ser actualizado ante cambios significativos en el stack, diseño o lógica de negocio.
@@ -70,3 +70,6 @@ Para facilitar la gestión del proyecto, se han creado las siguientes guías esp
 - 🚀 [**Guía de Despliegue Hostinger**](file:///e:/ANTIGRAVITY/3dsion_web/docs/GUIA_HOSTINGER.md): Pasos para subir la web a un servidor profesional.
 - 💾 [**GitHub Workflow**](file:///e:/ANTIGRAVITY/3dsion_web/docs/GITHUB_WORKFLOW.md): Protocolo de commits y despliegue.
 - 🎨 [**Guía de Temas**](file:///e:/ANTIGRAVITY/3dsion_web/docs/THEME_GUIDE.md): Estándares de color y estilo.
+
+## 11. REGLAS DE ORO
+- **Actualización de Historial:** Cada vez que se realiza un "guardado" (commit) significativo, es OBLIGATORIO actualizar `docs/HISTORY.md` con el detalle técnico de los cambios. Esto permite auditoría y continuidad del proyecto.
