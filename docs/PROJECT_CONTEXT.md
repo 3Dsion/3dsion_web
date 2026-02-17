@@ -36,7 +36,9 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 - **src/data:** 
   - `projects.json`: Fuente de verdad para el carrusel de casos de éxito.
   - `services.json`: Define los servicios mostrados en el mosaico.
-- **Layout:** `Navbar` y `Footer` se comparten entre las rutas principales. La `Navbar` cambia de transparente a sólido (`bg-nav-scrolled`) al hacer scroll (>50px).
+- **Navegación:** `Navbar` y `Footer` se comparten entre las rutas principales. 
+  - La `Navbar` cambia de transparente a sólido (`bg-nav-scrolled`) al hacer scroll (>50px) y se fuerza sólida en rutas claras como `/cotizar` y `/trayectoria`.
+  - **Scroll UX:** Se utiliza `scrollIntoView({ block: 'center' })` para anclas internas, asegurando que las secciones (como Contacto) queden centradas en el viewport.
 - **Contacto:** Datos duros en `ContactSection.jsx` (Guamini 5043, Lugano, CABA). El botón "COTIZAR" vincula directamente a WhatsApp corporativo.
 
 ## 6. CRITERIOS DE DESARROLLO
