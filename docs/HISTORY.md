@@ -4,6 +4,21 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
 
 ---
 
+## 🛠️ Febrero 17, 2026: Unificación Visual Soluciones v1.41
+### Commit `PENDING` - feat(v1.41): Unificación Soluciones UI, Scroll Navbar y Ajuste Hero
+**Descripción de la implementación:**
+- **Soluciones (Unificación UI/UX):**
+    - Se estandarizaron las 6 subpáginas (`Ingenieria`, `Produccion`, `GranFormato`, `Prototipado`, `Modelado`, `IngenieriaInversa`) bajo el mismo sistema de diseño "Glassmorphism" (tarjetas translúcidas, bordes sutiles, sombras).
+    - **Safe Zone:** Implementación global de `.whatsapp-safe-zone` en todos los contenedores para evitar solapamiento con el botón flotante.
+    - **Detalles Premium:** Se agregaron líneas de acento con degradado (`primary-to-orange`) y watermarks numéricos gigantes en las secciones de proceso.
+    - **Contenido:** Actualización quirúrgica de textos (copywriting) en todas las soluciones para reflejar la propuesta de valor exacta (e.g., "Consultoría de Factibilidad", "Entrega Programada", "Geometrías a Escala Real").
+- **Navegación:**
+    - **Scroll Top:** El logo y el botón "Inicio" ahora fuerzan el scroll al tope de la página (`window.scrollTo(0,0)`), mejorando la UX al navegar entre secciones.
+- **Hero:**
+    - Se ajustó la altura a `min-h-[105vh]` para asegurar que el video cubra la pantalla completa en móviles con barras de navegación dinámicas, evitando cortes visuales inferiores.
+- **Assets:**
+    - Actualización de `docs/ASSETS_GUIDE.md` con la nomenclatura estándar `[ruta]-hero.webp` y `[ruta]-card-n.webp`.
+
 ## 🛠️ Febrero 15, 2026: Despliegue Maestro v1.19
 ### Commit `1a378e1` - feat(v1.19): Despliegue Maestro - Trayectoria, Rediseño Home, SEO, Safe Zone y Assets
 **Descripción de la implementación:**

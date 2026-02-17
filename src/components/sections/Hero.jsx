@@ -6,7 +6,7 @@ import heroVideo from '../../assets/Banner-web-inicio.mp4';
 
 const Hero = () => {
     return (
-        <section className="relative h-screen w-full overflow-hidden">
+        <section className="relative min-h-[105vh] w-full overflow-hidden flex flex-col justify-center">
             {/* Background Video */}
             <video
                 ref={(el) => {

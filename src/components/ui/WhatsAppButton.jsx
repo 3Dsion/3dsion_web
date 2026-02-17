@@ -24,7 +24,7 @@ const WhatsAppButton = () => {
                 },
                 default: { delay: 1, duration: 0.5, type: "spring" }
             }}
-            className="fixed bottom-6 right-6 z-[60]"
+            className="fixed bottom-8 right-6 z-[60]"
         >
             <a
                 href={whatsappUrl}

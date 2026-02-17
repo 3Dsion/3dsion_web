@@ -32,7 +32,7 @@ const Navbar = () => {
     }, [location]);
 
     const navLinks = [
-        { name: 'Inicio', href: '/' },
+        { name: 'Inicio', href: '/', onClick: () => window.scrollTo(0, 0) },
         {
             name: 'Soluciones',
             href: '/#soluciones',
@@ -49,7 +49,7 @@ const Navbar = () => {
             className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-nav-scrolled py-4 shadow-lg' : 'bg-transparent py-4'}`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link to="/" className="flex items-center">
+                <Link to="/" className="flex items-center" onClick={() => window.scrollTo(0, 0)}>
                     <img src={logo} alt="3Dsion Logo" className={`h-8 lg:h-10 w-auto transition-all duration-300 ${scrolled ? '' : 'brightness-0 invert'}`} />
                 </Link>
 
@@ -72,6 +72,7 @@ const Navbar = () => {
                             ) : (
                                 <Link
                                     to={link.href}
+                                    onClick={link.onClick}
                                     className={`text-sm font-medium hover:text-primary transition-colors uppercase tracking-wider ${scrolled ? 'text-secondary' : 'text-white'}`}
                                 >
                                     {link.name}
@@ -168,7 +169,10 @@ const Navbar = () => {
                                     ) : (
                                         <Link
                                             to={link.href}
-                                            onClick={() => setIsOpen(false)}
+                                            onClick={() => {
+                                                setIsOpen(false);
+                                                if (link.onClick) link.onClick();
+                                            }}
                                             className="block text-base font-medium text-white hover:text-primary transition-colors uppercase py-3"
                                         >
                                             {link.name}

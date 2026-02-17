@@ -1,18 +1,8 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  
-  # Si estamos en una subcarpeta, el RewriteBase ayuda a React Router
-  # Si lo subís a /prueba, esto debería ser RewriteBase /prueba/
-  RewriteBase /
-  
-  # Redirecciones 301 (Solo si estamos en la raíz)
-  # RewriteRule ^impresion-3d/?$ /#soluciones [R=301,L]
-  # RewriteRule ^diseno-3d/?$ /#soluciones [R=301,L]
-
-  # Manejo de Rutas React (SPA)
+  RewriteBase /prueba/
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-l
-  RewriteRule . index.html [L]
+  RewriteRule . /prueba/index.html [L]
 </IfModule>

@@ -19,5 +19,3 @@ Usar clases consistentes:
 - **Cards:** `bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-xl`.
 - **Botones:** Transiciones suaves con `hover:scale-105 active:scale-95 duration-200`.
 
-## Modo Oscuro
-El sitio debe estar optimizado para modo oscuro por defecto para resaltar los colores de los renders y modelos.
