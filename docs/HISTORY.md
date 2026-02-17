@@ -5,7 +5,7 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
 ---
 
 ## 🛠️ Febrero 17, 2026: Unificación Visual Soluciones v1.41
-### Commit `PENDING` - feat(v1.41): Unificación Soluciones UI, Scroll Navbar y Ajuste Hero
+### Commit `51502f1` - feat(v1.41): Unificación Soluciones UI, Scroll Navbar y Ajuste Hero
 **Descripción de la implementación:**
 - **Soluciones (Unificación UI/UX):**
     - Se estandarizaron las 6 subpáginas (`Ingenieria`, `Produccion`, `GranFormato`, `Prototipado`, `Modelado`, `IngenieriaInversa`) bajo el mismo sistema de diseño "Glassmorphism" (tarjetas translúcidas, bordes sutiles, sombras).
