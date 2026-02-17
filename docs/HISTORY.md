@@ -10,7 +10,9 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
 - **Trayectoria (Estilo Laboratorio Iluminado):**
     - Se transformó la página de trayectoria para clonar la estética de `/cotizar` (fondos blancos, gradientes radiales sutiles y tipografía Navy Blue).
     - **Cards de Actos:** Se aplicó el sistema de tokens de cotización (`--cotizar-card-bg`, `--cotizar-card-border`) con efectos de glassmorphism suave.
-    - **Navegación:** El Navbar ahora es sólido por defecto en esta ruta para asegurar legibilidad sobre el fondo claro.
+    - **Navegación:**
+    - El Navbar ahora es sólido por defecto en esta ruta para asegurar legibilidad sobre el fondo claro.
+    - **Scroll UX:** Se optimizó el scroll de anclas en la Home para que los elementos (especialmente la tarjeta de contacto) se centren verticalmente en la pantalla (`block: center`), evitando que queden pegados al borde superior o tapados por el Navbar.
 - **Home (Optimización Contacto):**
     - **Compactación:** Se redujo el padding vertical global de `py-24` a `py-16`.
     - **UX:** Se ajustaron los gaps internos y tamaños de fuente del formulario para una estética más profesional y menos espaciada.
