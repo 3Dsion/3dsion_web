@@ -16,7 +16,8 @@ const Navbar = () => {
         const handleScroll = () => {
             const isCotizar = location.pathname === '/cotizar';
             const isSolucion = location.pathname.startsWith('/soluciones/');
-            setScrolled(isCotizar || isSolucion || window.scrollY > 50);
+            const isTrayectoria = location.pathname === '/trayectoria';
+            setScrolled(isCotizar || isSolucion || isTrayectoria || window.scrollY > 50);
         };
 
         handleScroll();

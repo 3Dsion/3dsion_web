@@ -19,7 +19,7 @@ const ContactInfoItem = ({ icon: Icon, label, value }) => (
 
 const ContactSection = () => {
     return (
-        <section id="contacto" className="py-24 bg-contact relative overflow-hidden">
+        <section id="contacto" className="py-16 bg-contact relative overflow-hidden">
             {/* Background Blobs */}
             <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
                 <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full filter blur-3xl animate-blob"></div>
@@ -31,16 +31,16 @@ const ContactSection = () => {
                 <div className="max-w-6xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl border border-gray-100 flex flex-col md:flex-row">
 
                     {/* Dark Side: Contact Info */}
-                    <div className="md:w-5/12 bg-secondary-dark p-10 lg:p-12 text-white flex flex-col justify-between">
+                    <div className="md:w-5/12 bg-secondary-dark p-8 lg:p-10 text-white flex flex-col justify-between">
                         <div>
-                            <h2 className="text-4xl font-bold mb-8 leading-tight">
+                            <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
                                 Pongamos en marcha <span className="text-primary block">tu proyecto</span>
                             </h2>
-                            <p className="text-gray-400 text-lg mb-10">
+                            <p className="text-gray-400 text-base mb-8">
                                 Estamos en {company.contact.city}, listos para asesorarte en tu próximo desarrollo industrial.
                             </p>
 
-                            <div className="space-y-8">
+                            <div className="space-y-5">
                                 <ContactInfoItem
                                     icon={Phone}
                                     label="Teléfono / WhatsApp"
@@ -65,7 +65,7 @@ const ContactSection = () => {
                         </div>
 
                         {/* Maps */}
-                        <div className="w-full h-48 rounded-2xl overflow-hidden border border-white/10 grayscale opacity-60 hover:opacity-100 transition-opacity mt-12">
+                        <div className="w-full h-40 rounded-2xl overflow-hidden border border-white/10 grayscale opacity-60 hover:opacity-100 transition-opacity mt-8">
                             <iframe
                                 src={company.contact.maps_url}
                                 width="100%"
@@ -78,34 +78,34 @@ const ContactSection = () => {
                     </div>
 
                     {/* Light Side: Form */}
-                    <div className="md:w-7/12 p-10 lg:p-12 bg-white flex flex-col justify-center">
+                    <div className="md:w-7/12 p-8 lg:p-10 bg-white flex flex-col justify-center">
                         <SectionTitle
                             title="Envianos tu"
                             highlight="Consulta"
-                            className="mb-8"
+                            className="mb-6"
                         />
 
-                        <form className="space-y-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div className="space-y-2">
-                                    <label className="text-sm font-semibold text-secondary-dark/60 ml-1">Nombre</label>
-                                    <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-secondary-dark" placeholder="Tu nombre" />
+                        <form className="space-y-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div className="space-y-1.5">
+                                    <label className="text-xs font-semibold text-secondary-dark/60 ml-1">Nombre</label>
+                                    <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-secondary-dark text-sm" placeholder="Tu nombre" />
                                 </div>
-                                <div className="space-y-2">
-                                    <label className="text-sm font-semibold text-secondary-dark/60 ml-1">Empresa</label>
-                                    <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-secondary-dark" placeholder="Nombre empresa" />
+                                <div className="space-y-1.5">
+                                    <label className="text-xs font-semibold text-secondary-dark/60 ml-1">Empresa</label>
+                                    <input type="text" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-secondary-dark text-sm" placeholder="Nombre empresa" />
                                 </div>
                             </div>
-                            <div className="space-y-2">
-                                <label className="text-sm font-semibold text-secondary-dark/60 ml-1">Email Corporativo</label>
-                                <input type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-secondary-dark" placeholder="tucorreo@empresa.com" />
+                            <div className="space-y-1.5">
+                                <label className="text-xs font-semibold text-secondary-dark/60 ml-1">Email Corporativo</label>
+                                <input type="email" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-secondary-dark text-sm" placeholder="tucorreo@empresa.com" />
                             </div>
-                            <div className="space-y-2">
-                                <label className="text-sm font-semibold text-secondary-dark/60 ml-1">¿En qué podemos ayudarte?</label>
-                                <textarea rows="4" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-secondary-dark resize-none" placeholder="Breve descripción del proyecto..."></textarea>
+                            <div className="space-y-1.5">
+                                <label className="text-xs font-semibold text-secondary-dark/60 ml-1">¿En qué podemos ayudarte?</label>
+                                <textarea rows="3" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-3 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all text-secondary-dark resize-none text-sm font-light leading-relaxed" placeholder="Breve descripción del proyecto..."></textarea>
                             </div>
 
-                            <Button className="w-full py-5 text-lg" variant="primary">
+                            <Button className="w-full py-4 text-base mt-2" variant="primary">
                                 ENVIAR MENSAJE
                             </Button>
                         </form>

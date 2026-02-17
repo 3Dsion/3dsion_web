@@ -4,6 +4,20 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
 
 ---
 
+## 🛠️ Febrero 17, 2026: Unificación Visual Trayectoria v1.51
+### Commit `pend-commit-id` - feat(v1.51): Unificación Trayectoria estilo Cotizar y Optimización Contacto
+**Descripción de la implementación:**
+- **Trayectoria (Estilo Laboratorio Iluminado):**
+    - Se transformó la página de trayectoria para clonar la estética de `/cotizar` (fondos blancos, gradientes radiales sutiles y tipografía Navy Blue).
+    - **Cards de Actos:** Se aplicó el sistema de tokens de cotización (`--cotizar-card-bg`, `--cotizar-card-border`) con efectos de glassmorphism suave.
+    - **Navegación:** El Navbar ahora es sólido por defecto en esta ruta para asegurar legibilidad sobre el fondo claro.
+- **Home (Optimización Contacto):**
+    - **Compactación:** Se redujo el padding vertical global de `py-24` a `py-16`.
+    - **UX:** Se ajustaron los gaps internos y tamaños de fuente del formulario para una estética más profesional y menos espaciada.
+- **Calidad:** Verificación completa con `npm run build`.
+
+---
+
 ## 🛠️ Febrero 17, 2026: Unificación Visual Soluciones v1.41
 ### Commit `51502f1` - feat(v1.41): Unificación Soluciones UI, Scroll Navbar y Ajuste Hero
 **Descripción de la implementación:**

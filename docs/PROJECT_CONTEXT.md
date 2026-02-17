@@ -17,10 +17,11 @@ Este documento sirve como memoria técnica y estratégica del proyecto. Permite 
 - **Routing:** React Router DOM v6.
 - **Manejo de Metadatos:** React Helmet Async [PENDIENTE de optimización SEO].
 
-## 3. ESTADO ACTUAL (Hito: Tema Claro Implementado)
-- **Home:** Completa. Secciones ensambladas: `Hero`, `ServicesMosaic`, `TechAuthority`, `ProjectCarousel`, `ValueProp`, `ProcessSection`, `ContactSection` (rediseñada en v1.19).
-- **Trayectoria:** Página institucional con estructura de 3 actos, reemplazando a la antigua `Nosotros`.
-- **Tema:** El sitio fue convertido de Dark a **Tema Claro (Light)**. Los fondos de las secciones son controlados por variables CSS en `src/index.css`.
+## 3. ESTADO ACTUAL (Hito: Unificación Estética Total v1.51)
+- **Home:** Completa y optimizada. `ContactSection` ajustada para eficiencia de espacio (v1.51).
+- **Trayectoria:** Página institucional totalmente unificada con el diseño de `/cotizar` (v1.51), usando temas claros y tarjetas de ingeniería.
+- **Soluciones:** 6 subpáginas (`Ingenieria`, `Produccion`, `GranFormato`, `Prototipado`, `Modelado`, `IngenieriaInversa`) unificadas bajo el sistema Glassmorphism e identidad "Clean Tech".
+- **Tema:** El sitio es 100% **Tema Claro (Light)**, con rutas críticas como `/cotizar` y `/trayectoria` forzando legibilidad sólida desde el inicio.
 - **Sincronización:** Datos como proyectos y servicios están desacoplados en archivos JSON.
 
 ## 4. DIRECCIÓN DE DISEÑO (Industrial Premium)

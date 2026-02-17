@@ -35,69 +35,92 @@ const Trayectoria = () => {
     ];
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-white">
             <Helmet>
                 <title>Trayectoria | 3Dsion — 27 Años de Ingeniería e Impresión 3D Industrial</title>
                 <meta name="description" content="La evolución de 3Dsion: del diseño mecánico tradicional a la manufactura aditiva industrial. 27 años transformando desafíos técnicos en soluciones reales." />
                 <meta name="keywords" content="trayectoria 3Dsion, ingeniería industrial, impresión 3D, manufactura aditiva, diseño mecánico, historia empresa" />
             </Helmet>
             <Navbar />
-            <main className="flex-grow pt-24">
-                {/* Hero Trayectoria */}
-                <section className="py-24 bg-black relative overflow-hidden">
-                    <div className="absolute inset-0 bg-primary/5 blur-[120px] rounded-full -translate-y-1/2"></div>
-                    <div className="container mx-auto px-6 relative z-10 text-center">
+
+            <main id="cotizar" className="flex-grow pt-20 relative overflow-hidden">
+                {/* Fondo Estilo Cotizar (Clean/Lab) */}
+                <div className="absolute inset-0 z-0 pointer-events-none">
+                    <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-[var(--bg-tech)] blur-[150px] rounded-full opacity-20"></div>
+                    <div
+                        className="absolute top-0 left-0 w-full h-[1000px]"
+                        style={{
+                            background: 'radial-gradient(circle at center 20%, rgba(229, 239, 252, 1) 0%, transparent 70%)'
+                        }}
+                    ></div>
+                </div>
+
+                {/* Hero Trayectoria - Estilo Cotizar */}
+                <section className="py-20 relative z-10">
+                    <div className="container mx-auto px-6 text-center">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
                         >
-                            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-bold uppercase tracking-widest mb-8">
-                                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 bg-gray-50/50 backdrop-blur-md text-secondary-dark text-[10px] font-bold uppercase tracking-widest mb-6 shadow-sm">
+                                <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
                                 Trayectoria Institucional
-                            </span>
-                            <h1 className="text-4xl md:text-7xl font-bold mb-8">
+                            </div>
+                            <h1 style={{ color: 'var(--cotizar-text-titles)' }} className="text-4xl md:text-7xl font-bold mb-8 tracking-tight">
                                 27 años transformando <br /><span className="text-primary italic">ideas en realidades</span>
                             </h1>
-                            <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                            <p style={{ color: 'var(--cotizar-text-body)' }} className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-light">
                                 De la mesa de dibujo a la fabricación aditiva: una evolución constante dedicada a la ingeniería de precisión.
                             </p>
                         </motion.div>
                     </div>
                 </section>
 
-                {/* 3 Actos Narrativos */}
-                <section className="py-24 bg-secondary-dark">
-                    <div className="container mx-auto px-6">
-                        <div className="space-y-24">
+                {/* 3 Actos Narrativos con Estilo Tarjetas Cotizar */}
+                <section className="py-24 relative z-10">
+                    <div className="container mx-auto px-6 whatsapp-safe-zone">
+                        <div className="space-y-32">
                             {acts.map((act, i) => (
                                 <motion.div
                                     key={i}
                                     initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
-                                    transition={{ delay: 0.1, duration: 0.6 }}
-                                    className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${i % 2 !== 0 ? 'lg:direction-rtl' : ''}`}
+                                    transition={{ delay: 0.1, duration: 0.8 }}
+                                    className={`relative grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${i % 2 !== 0 ? 'lg:direction-rtl' : ''}`}
                                 >
-                                    {/* Texto */}
-                                    <div className={`space-y-6 ${i % 2 !== 0 ? 'lg:order-2' : ''}`}>
-                                        <span className="text-primary font-bold text-sm uppercase tracking-widest">{act.tag}</span>
-                                        <h2 className="text-3xl md:text-4xl font-bold text-white">
+                                    {/* Watermark Numérico Sutil */}
+                                    <div className={`absolute -top-20 hidden lg:block text-[15rem] font-black text-secondary-dark/[0.03] select-none leading-none pointer-events-none ${i % 2 !== 0 ? 'left-0' : 'right-0'}`}>
+                                        0{i + 1}
+                                    </div>
+
+                                    {/* Texto descriptivo en Card Estilo Cotizar */}
+                                    <div
+                                        style={{ backgroundColor: 'var(--cotizar-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
+                                        className={`relative z-10 p-8 md:p-12 rounded-[2.5rem] border shadow-xl backdrop-blur-md ${i % 2 !== 0 ? 'lg:order-2' : ''}`}
+                                    >
+                                        <div className="w-12 h-1 bg-gradient-to-r from-primary to-orange-400 mb-8"></div>
+                                        <span className="text-primary font-bold text-xs uppercase tracking-[0.3em] mb-4 block">{act.tag}</span>
+                                        <h2 style={{ color: 'var(--cotizar-text-titles)' }} className="text-3xl md:text-4xl font-bold mb-2">
                                             {act.title}
                                         </h2>
-                                        <h3 className="text-xl text-primary/80 font-medium italic">{act.subtitle}</h3>
-                                        <p className="text-gray-400 text-base leading-relaxed">
+                                        <h3 className="text-lg text-primary/60 font-medium italic mb-6 tracking-wide">{act.subtitle}</h3>
+                                        <p style={{ color: 'var(--cotizar-text-body)' }} className="text-base leading-relaxed font-light">
                                             {act.desc}
                                         </p>
                                     </div>
 
-                                    {/* Imagen placeholder */}
+                                    {/* Imagen placeholder / Visual */}
                                     <div className={`relative group ${i % 2 !== 0 ? 'lg:order-1' : ''}`}>
-                                        <div className="absolute -inset-4 bg-primary/20 blur-2xl group-hover:bg-primary/30 transition-all rounded-[3rem]"></div>
-                                        <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 aspect-video">
-                                            {/* Placeholder: {act.image} — Reemplazar con <img> cuando se cargue el asset */}
-                                            <div className="w-full h-full bg-slate-100 animate-pulse flex items-center justify-center">
-                                                <span className="text-slate-400 text-sm font-medium tracking-wide">{act.image}</span>
+                                        <div className="absolute -inset-4 bg-primary/5 blur-3xl group-hover:bg-primary/10 transition-all rounded-[3rem] opacity-50"></div>
+                                        <div className="relative rounded-[2rem] overflow-hidden border border-gray-100 aspect-video bg-gray-50 flex items-center justify-center">
+                                            {/* Visual Placeholder */}
+                                            <div className="text-center">
+                                                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-4 shadow-sm border border-gray-100 group-hover:scale-110 transition-transform duration-500">
+                                                    <span className="text-primary font-bold">0{i + 1}</span>
+                                                </div>
+                                                <span className="text-gray-300 text-[10px] font-bold tracking-widest uppercase">{act.image}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -107,25 +130,29 @@ const Trayectoria = () => {
                     </div>
                 </section>
 
-                {/* CTA: ¿Tenés un desafío técnico? */}
-                <section className="py-24 bg-primary/10">
-                    <div className="container mx-auto px-6 text-center">
+                {/* CTA Final Unificado estilo Cotizar Form Card */}
+                <section className="py-24">
+                    <div className="container mx-auto px-6 text-center whatsapp-safe-zone">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
+                            style={{ backgroundColor: 'var(--cotizar-form-card-bg)', borderColor: 'var(--cotizar-card-border)' }}
+                            className="p-12 md:p-20 rounded-[3rem] border shadow-2xl relative overflow-hidden"
                         >
-                            <h2 className="text-3xl md:text-5xl font-bold mb-8">¿Tenés un desafío técnico?</h2>
-                            <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-                                3Dsion está preparado para transformar cada obstáculo de ingeniería en una solución fabricable.
-                            </p>
-                            <Link
-                                to="/#contacto"
-                                className="bg-primary text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-primary-dark transition-all shadow-2xl shadow-primary/20 inline-flex items-center gap-3"
-                            >
-                                CONTACTAR AHORA
-                                <ArrowRight size={20} />
-                            </Link>
+                            <div className="relative z-10">
+                                <h2 style={{ color: 'var(--cotizar-text-titles)' }} className="text-3xl md:text-5xl font-bold mb-8">¿Tenés un desafío técnico?</h2>
+                                <p style={{ color: 'var(--cotizar-text-body)' }} className="text-xl mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+                                    3Dsion está preparado para transformar cada <span className="text-primary font-bold">obstáculo de ingeniería</span> en una solución fabricable.
+                                </p>
+                                <Link
+                                    to="/#contacto"
+                                    className="bg-primary text-white px-12 py-5 rounded-full font-bold text-sm tracking-widest hover:bg-orange-500 transition-all shadow-2xl shadow-primary/20 inline-flex items-center gap-3 uppercase group"
+                                >
+                                    CONTACTAR AHORA
+                                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                                </Link>
+                            </div>
                         </motion.div>
                     </div>
                 </section>
