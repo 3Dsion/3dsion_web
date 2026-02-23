@@ -65,11 +65,11 @@ def execute_task():
         
         # 4. Add content
         if notebook_id:
-            print("Adding content...")
+            print("Adding content v2.0...")
             send({"jsonrpc": "2.0", "id": 4, "method": "tools/call", "params": {"name": "notebook_add_text", "arguments": {
                 "notebook_id": notebook_id,
                 "text": plan_content,
-                "title": "Plan de Producción Visual v1.0"
+                "title": "Plan de Producción Visual y Metadata v2.0"
             }}})
             res_add = receive()
             print("Content added successfully.")
