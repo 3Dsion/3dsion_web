@@ -20,7 +20,7 @@ const ProjectCarousel = () => {
     }, []);
 
     return (
-        <section id="proyectos" className="py-24 bg-projects relative">
+        <section id="casos-exito" className="py-24 bg-projects relative">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                     <div>
@@ -30,7 +30,7 @@ const ProjectCarousel = () => {
                             viewport={{ once: true }}
                             className="text-3xl md:text-5xl font-bold mb-4 text-secondary-dark"
                         >
-                            Proyectos Destacados
+                            Casos de Éxito
                         </motion.h2>
                         <div className="h-1 w-20 bg-primary mb-4"></div>
                         <p className="text-gray-600 max-w-md">

@@ -6,10 +6,10 @@ import Button from '../ui/Button';
 
 const ValueProp = () => {
     const whyUs = [
-        { title: "Optimización de Procesos", desc: "Cada proyecto se analiza con criterio de ingeniería real para reducir tiempos de desarrollo y costos de producción.", icon: Award },
-        { title: "Alianza Técnica", desc: "3Dsion acompaña desde el concepto inicial hasta la pieza final, integrando diseño, materiales y fabricación.", icon: Zap },
-        { title: "Agilidad Operativa", desc: "Capacidad de respuesta inmediata: desde un prototipo único hasta series cortas listas para planta.", icon: CheckCircle2 },
-        { title: "ADN Industrial", desc: "Más de 27 años de experiencia en diseño mecánico y manufactura se traducen en cada pieza entregada.", icon: Users },
+        { title: "Seguridad Productiva", desc: "Cada pieza se analiza con criterio técnico para evitar errores básicos en el montaje y asegurar la viabilidad del modelo.", icon: Award },
+        { title: "Ajuste de Matrices", desc: "Ajustamos archivos para prototipos master según las especificaciones técnicas solicitadas por el cliente.", icon: Zap },
+        { title: "Respuesta Técnica", desc: "Protocolo de revisión de archivos incluido: colaboramos en la optimización de tus diseños antes de la producción.", icon: CheckCircle2 },
+        { title: "Know-how Industrial", desc: "Más de 27 años resolviendo problemas técnicos mediante manufactura aditiva y co-creación constante.", icon: Users },
     ];
 
     return (

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Trayectoria from './pages/Trayectoria';
@@ -17,6 +18,7 @@ function App() {
 
     return (
         <Router basename={basename}>
+            <ScrollToTop />
             <div className="min-h-screen">
                 <Routes>
                     <Route path="/" element={<Home />} />

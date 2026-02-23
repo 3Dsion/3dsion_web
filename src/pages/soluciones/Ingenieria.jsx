@@ -13,28 +13,24 @@ import Button from '../../components/ui/Button';
 // import optimizacionBg from '../../assets/ing-optimizacion-bg.webp';
 
 const Ingenieria = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
     const technicalCards = [
         {
-            title: "Consultoría de Factibilidad",
-            desc: "Evaluamos tu diseño con criterio industrial antes de fabricar. Te asesoramos sobre geometrías, materiales y procesos para garantizar que tu proyecto sea viable, eficiente y optimizado para manufactura aditiva.",
+            title: "Auditoría de Factibilidad",
+            desc: "Evaluamos tu diseño con criterio industrial antes de fabricar. Realizamos una auditoría de archivos STEP/IGES para detectar problemas de manufactura, optimizando geometrías y materiales.",
             icon: PenTool,
-            image: "ing-dfm-bg.webp" // Placeholder logic
+            image: "ing-dfm-bg.webp"
         },
         {
-            title: "Validación de Movimiento y Función",
-            desc: "Analizamos cómo interactúan las piezas y cómo se comportan los mecanismos en conjunto. Aseguramos que cada encastre y movimiento responda exactamente a tu lógica antes de fabricar.",
+            title: "Validación de Ensambles",
+            desc: "Analizamos la interacción mecánica entre componentes complejos. Aseguramos que cada tolerancia y encastre responda exactamente a la lógica de funcionamiento exigida en planta.",
             icon: Search,
-            image: "ing-validacion-bg.webp" // Placeholder logic
+            image: "ing-validacion-bg.webp"
         },
         {
-            title: "Optimización Técnica",
-            desc: "Reducimos peso y mejoramos la eficiencia según la prioridad de tu industria, logrando componentes más inteligentes y resistentes.",
+            title: "Optimización de Materiales",
+            desc: "Asesoramiento técnico basado en materiales industriales probados. Transformamos diseños conceptuales en prototipos funcionales mediante el uso inteligente de polímeros de alto desempeño.",
             icon: Zap,
-            image: "ing-optimizacion-bg.webp" // Placeholder logic
+            image: "ing-optimizacion-bg.webp"
         }
     ];
 
@@ -48,15 +44,15 @@ const Ingenieria = () => {
     const processSteps = [
         { id: "01", t: "ESCUCHA Y DIAGNÓSTICO", d: "Relevamos juntos la función de la pieza en su entorno real. Entender tu necesidad es el primer paso." },
         { id: "02", t: "VALIDACIÓN FUNCIONAL RÁPIDA", d: "Iteramos prototipos para testear forma, ajuste y ergonomía. Tu feedback guía la evolución del diseño." },
-        { id: "03", t: "INGENIERÍA DE DETALLE", d: "Aplicamos modelado paramétrico avanzado para optimizar cada geometría según las pruebas de campo." },
-        { id: "04", t: "TRANSFERENCIA INDUSTRIAL", d: "Entrega de archivos maestros y documentación técnica listos para producción." }
+        { id: "03", t: "DETALLE TÉCNICO", d: "Ajustamos geometrías y tolerancias según los resultados de las pruebas para asegurar la manufacturabilidad." },
+        { id: "04", t: "ENTREGA DE MODELO", d: "Entrega de archivos validados y piezas impresas listas para su integración o uso como modelos master." }
     ];
 
     return (
         <div className="flex flex-col min-h-screen bg-white">
             <Helmet>
-                <title>Ingeniería & Co-Creación | 3Dsion</title>
-                <meta name="description" content="Co-creamos soluciones industriales. Escuchamos tu necesidad para integrar tu visión con nuestro criterio técnico, transformando desafíos en productos funcionales." />
+                <title>Ingeniería 3D & Co-Creación Técnica | 3Dsion</title>
+                <meta name="description" content="Acompañamos tu validación técnica. Optimización de archivos STEP, ajuste de mallas y fabricación de prototipos master con criterio industrial real." />
             </Helmet>
 
             <Navbar />

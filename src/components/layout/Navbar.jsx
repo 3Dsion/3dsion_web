@@ -40,7 +40,7 @@ const Navbar = () => {
             dropdown: servicesData.map(s => ({ name: s.title, href: s.link }))
         },
         { name: 'Casos de Éxito', href: '/#proyectos' },
-        { name: 'Trayectoria', href: '/trayectoria' },
+        { name: 'Trayectoria', href: '/trayectoria', onClick: () => window.scrollTo(0, 0) },
         { name: 'Contacto', href: '/#contacto' },
     ];
 
@@ -107,6 +107,7 @@ const Navbar = () => {
                     ))}
                     <Link
                         to="/cotizar"
+                        onClick={() => window.scrollTo(0, 0)}
                         className="bg-primary hover:bg-orange-500 text-white px-5 py-2 rounded-full text-sm font-bold flex items-center transition-all"
                     >
                         COTIZAR
@@ -184,7 +185,10 @@ const Navbar = () => {
                             <div className="pt-4">
                                 <Link
                                     to="/cotizar"
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={() => {
+                                        setIsOpen(false);
+                                        window.scrollTo(0, 0);
+                                    }}
                                     className="w-full bg-primary hover:bg-orange-500 text-white px-5 py-3 rounded-xl text-center font-bold flex items-center justify-center transition-all"
                                 >
                                     COTIZAR

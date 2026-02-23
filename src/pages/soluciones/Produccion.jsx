@@ -15,18 +15,18 @@ const Produccion = () => {
     const features = [
         {
             icon: Factory,
-            title: "Escalabilidad Flexible",
-            desc: "Pasa de 10 a 1000 unidades sin los costos fijos de matricería tradicional. Adaptamos la producción a tu demanda real."
+            title: "Series Cortas",
+            desc: "Fabricación de lotes de baja escala sin costos de matricería. Ideal para piezas personalizadas o componentes técnicos que requieren validación ágil."
         },
         {
             icon: Zap,
-            title: "Entrega Programada",
-            desc: "Sin cuellos de botella. Respondemos a tu demanda mensual sin los tiempos de espera de la importación o la fabricación convencional."
+            title: "Auditoría de Calidad",
+            desc: "Control dimensional estadístico en cada lote. Aseguramos que la precisión se mantenga desde el primer prototipo hasta la pieza número 1000."
         },
         {
             icon: Boxes,
             title: "Inventario Digital",
-            desc: "Fabrica solo lo que necesitas. Reduce costos de almacenamiento manteniendo tus piezas como archivos digitales listos para imprimir."
+            desc: "Reducción de stock físico mediante almacenes digitales. Fabricamos bajo demanda real con materiales industriales de alta calidad."
         }
     ];
 
@@ -40,8 +40,8 @@ const Produccion = () => {
     return (
         <div className="flex flex-col min-h-screen bg-white">
             <Helmet>
-                <title>Producción en Serie | 3Dsion</title>
-                <meta name="description" content="Fabricación aditiva escalable para lotes de producción. Sin costos de moldes, entrega programada y calidad industrial constante." />
+                <title>Producción en Serie & Lotes Cortos | 3Dsion</title>
+                <meta name="description" content="Manufactura aditiva para series cortas y personalizadas. Calidad constante, validación dimensional y entrega programada sin inversión inicial en moldes." />
             </Helmet>
 
             <Navbar />

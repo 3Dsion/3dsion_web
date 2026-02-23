@@ -15,18 +15,18 @@ const IngenieriaInversa = () => {
     const features = [
         {
             icon: ScanFace,
-            title: "Captura de Geometría",
-            desc: "Escaneo de alta precisión para capturar la geometría exacta de objetos físicos complejos, sin importar su forma o tamaño."
+            title: "Escaneo Metrológico",
+            desc: "Captura de nube de puntos con precisión industrial para piezas mecánicas complejas, garantizando fidelidad milimétrica."
         },
         {
             icon: RotateCw,
-            title: "Modelado de Nube de Puntos",
-            desc: "Conversión de mallas de puntos (STL) a cuerpos sólidos editables (STEP), permitiendo modificaciones, mejoras y manufactura futura."
+            title: "Reconstrucción Paramétrica",
+            desc: "Conversión de mallas STL en archivos STEP sólidos y editables. Acompañamos la reconstrucción de la intención de diseño para su fabricación."
         },
         {
             icon: History,
-            title: "Sustitución de Repuestos",
-            desc: "Fabricación de piezas descatalogadas para maquinaria antigua o descontinuada donde ya no existen planos ni proveedores originales."
+            title: "Ajuste de Sustitución",
+            desc: "Recuperación de piezas descatalogadas. Colaboramos en la mejora del repuesto original mediante ajustes solicitados por el cliente."
         }
     ];
 
@@ -40,8 +40,8 @@ const IngenieriaInversa = () => {
     return (
         <div className="flex flex-col min-h-screen bg-white">
             <Helmet>
-                <title>Ingeniería Inversa | 3Dsion</title>
-                <meta name="description" content="Rescate de activos críticos. Escaneo 3D, modelado de nube de puntos y sustitución de repuestos descatalogados con manufactura aditiva." />
+                <title>Ingeniería Inversa & Reconstrucción CAD | 3Dsion</title>
+                <meta name="description" content="Recuperamos activos industriales críticos. Escaneo de precisión, reconstrucción paramétrica a STEP y ajuste de repuestos descatalogados bajo especificaciones del cliente." />
             </Helmet>
 
             <Navbar />

@@ -15,18 +15,18 @@ const Prototipado = () => {
     const features = [
         {
             icon: Timer,
-            title: "Iteración Rápida",
-            desc: "Falla rápido, aprende rápido. Reduce el ciclo de desarrollo de producto de meses a semanas mediante iteraciones ágiles."
+            title: "Validación de Diseño",
+            desc: "Auditoría técnica de archivos CAD antes de la fabricación masiva. Detectamos errores de pared, mallas abiertas o geometrías no viables."
         },
         {
             icon: FlaskConical,
-            title: "Pruebas Funcionales",
-            desc: "Utiliza materiales que simulan las propiedades finales (resistencia, flexibilidad, temperatura) para validación real en campo."
+            title: "Pruebas de Material",
+            desc: "Validación real con polímeros de ingeniería (Nylon, ASA, Carbon Fiber) que simulan comportamientos mecánicos finales en planta."
         },
         {
             icon: Ruler,
-            title: "Precisión Dimensional",
-            desc: "Verifica encastres, tolerancias y ergonomía con prototipos de alta fidelidad antes de invertir en herramental costoso."
+            title: "Control de Tolerancias",
+            desc: "Verificación milimétrica de encastres y compensación de contracción para másters de matricería y herramental costoso."
         }
     ];
 
@@ -40,8 +40,8 @@ const Prototipado = () => {
     return (
         <div className="flex flex-col min-h-screen bg-white">
             <Helmet>
-                <title>Prototipado & Validación | 3Dsion</title>
-                <meta name="description" content="Minimizá riesgos y optimizá tu inversión. Transformamos archivos digitales en prototipos físicos para validar tus ideas antes de la fabricación masiva." />
+                <title>Prototipado Industrial & Validación Técnica | 3Dsion</title>
+                <meta name="description" content="Minimizá riesgos productivos. Validamos tus archivos STEP mediante prototipos técnicos de alta precisión con materiales grado ingeniería para validación real." />
             </Helmet>
 
             <Navbar />

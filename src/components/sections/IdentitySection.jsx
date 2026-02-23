@@ -26,17 +26,17 @@ const IdentitySection = () => {
                                     className="mb-8"
                                 />
                                 <p className="text-gray-600 text-lg mb-10 leading-relaxed uppercase tracking-tighter italic border-l-4 border-primary pl-6 font-bold">
-                                    Criterio técnico aplicado a cada milímetro de tu proyecto.
+                                    Criterio técnico y co-creación en cada etapa de tu pieza.
                                 </p>
                             </motion.div>
                         </div>
 
                         <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-8">
                             {[
-                                { t: "Soluciones a medida", d: "No vendemos impresión, vendemos la respuesta técnica que tu proyecto necesita." },
-                                { t: "Asesoría Profesional", d: "Acompañamiento desde la idea hasta la pieza final, optimizando cada paso." },
-                                { t: "Rigor Industrial", d: "Tolerancias precisas y materiales validados para uso en planta." },
-                                { t: "Tecnología de Punta", d: "Acceso a las mejores máquinas para resultados excepcionales." }
+                                { t: "Socio en Ingeniería", d: "Acompañamos la validación técnica que tu proyecto exige, aportando soluciones de manufactura real." },
+                                { t: "Optimización de Archivos", d: "Corregimos archivos CAD y ajustamos mallas 3D según tus especificaciones antes de fabricar." },
+                                { t: "Ajuste de Modelos", d: "Modificamos archivos para moldes y matrices según las indicaciones del cliente para asegurar el resultado buscado." },
+                                { t: "Materiales Probados", d: "Trabajamos con materiales industriales para prototipado funcional y piezas de uso final en entornos controlados." }
                             ].map((val, i) => (
                                 <motion.div
                                     key={i}

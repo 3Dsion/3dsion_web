@@ -48,19 +48,19 @@ const Hero = () => {
                         </div>
 
                         <h1 style={{ color: 'var(--hero-text-main)' }} className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.1] mb-8 tracking-tight">
-                            Impresión 3D <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Soluciones Reales</span>
+                            Ingeniería Aditiva <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">Criterio Industrial</span>
                         </h1>
 
                         <p style={{ color: 'var(--hero-text-main)', opacity: 0.8 }} className="text-lg md:text-xl mb-10 leading-relaxed max-w-2xl font-light border-l-2 border-primary/50 pl-6">
-                            Diseño e impresión 3D aplicada a la industria. Desarrollo de moldes, matrices, prototipos funcionales y piezas técnicas para empresas.
+                            Validación de diseños, prototipado de alta precisión y manufactura para ingeniería. Socio estratégico en el desarrollo de moldes, matrices y piezas técnicas.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-5">
                             <Button href="#soluciones">
                                 SOLUCIONES
                             </Button>
-                            <Button href="#proyectos" variant="secondary" className="gap-2">
+                            <Button href="#casos-exito" variant="secondary" className="gap-2">
                                 <Briefcase size={18} />
                                 CASOS DE ÉXITO
                             </Button>
