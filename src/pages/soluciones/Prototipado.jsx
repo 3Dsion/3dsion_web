@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
-import { Timer, FlaskConical, Ruler, TestTube2, CheckCircle2 } from 'lucide-react';
+import { Timer, FlaskConical, Ruler, TestTube2, CheckCircle2, Lightbulb, Wrench, MessageSquare, CheckCircle } from 'lucide-react';
 import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import SectionTitle from '../../components/ui/SectionTitle';
@@ -33,10 +33,10 @@ const Prototipado = () => {
     ];
 
     const steps = [
-        { id: "01", t: "MVP CONCEPTUAL", d: "Primera versión física para evaluar forma, tamaño y estética." },
-        { id: "02", t: "PROTOTIPO FUNCIONAL", d: "Versión operativa para validar el desempeño mecánico del diseño y su usabilidad." },
-        { id: "03", t: "FEEDBACK Y AJUSTE", d: "Refinamiento del diseño basado en los resultados de las pruebas." },
-        { id: "04", t: "VALIDACIÓN FINAL", d: "Prototipo pre-serie idéntico al producto final para aprobación." }
+        { id: "01", icon: Lightbulb, t: "MVP CONCEPTUAL", d: "Primera versión física para evaluar forma, tamaño y estética." },
+        { id: "02", icon: Wrench, t: "PROTOTIPO FUNCIONAL", d: "Versión operativa para validar el desempeño mecánico del diseño y su usabilidad." },
+        { id: "03", icon: MessageSquare, t: "FEEDBACK Y AJUSTE", d: "Refinamiento del diseño basado en los resultados de las pruebas." },
+        { id: "04", icon: CheckCircle, t: "VALIDACIÓN FINAL", d: "Prototipo pre-serie idéntico al producto final para aprobación." }
     ];
 
     return (
@@ -165,7 +165,8 @@ const Prototipado = () => {
                                         {step.id}
                                     </div>
                                     <div className="relative z-10">
-                                        <div className="w-10 h-1 bg-gradient-to-r from-primary to-orange-400 mb-6"></div>
+                                        <step.icon className="w-10 h-10 text-primary mb-6" />
+                                        <div className="w-10 h-1 bg-gradient-to-r from-primary to-orange-400 mb-4"></div>
                                         <h4 className="font-bold text-secondary-dark mb-4 text-lg">{step.t}</h4>
                                         <p className="text-gray-500 text-sm leading-relaxed">
                                             {step.d}
