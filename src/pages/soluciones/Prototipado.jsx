@@ -15,18 +15,18 @@ const Prototipado = () => {
     const features = [
         {
             icon: Timer,
-            title: "Validación de Diseño",
-            desc: "Auditoría técnica de archivos CAD antes de la fabricación masiva. Detectamos errores de pared, mallas abiertas o geometrías no viables."
+            title: "Validación de Ensambles",
+            desc: "Analizamos encastres y rangos de movimiento para asegurar un funcionamiento perfecto y sin interferencias antes de la fabricación final."
         },
         {
             icon: FlaskConical,
-            title: "Pruebas de Material",
-            desc: "Validación real con polímeros de ingeniería (Nylon, ASA, Carbon Fiber) que simulan comportamientos mecánicos finales en planta."
+            title: "Ensayos de Campo",
+            desc: "Prototipos técnicos para pruebas reales. Evaluamos resultados junto a su equipo para optimizar el diseño y asegurar la viabilidad del proyecto."
         },
         {
             icon: Ruler,
-            title: "Control de Tolerancias",
-            desc: "Verificación milimétrica de encastres y compensación de contracción para másters de matricería y herramental costoso."
+            title: "Precisión Dimensional",
+            desc: "Garantizamos la fidelidad entre el CAD y la pieza física, certificando tolerancias críticas mediante instrumentos de medición industrial."
         }
     ];
 
@@ -50,8 +50,11 @@ const Prototipado = () => {
                 {/* Hero Sección */}
                 <section className="relative pt-32 pb-24 bg-secondary-dark overflow-hidden">
                     <div className="absolute inset-0 z-0">
-                        {/* Placeholder for proto-hero.webp */}
-                        <div className="w-full h-full bg-slate-800 animate-pulse opacity-20"></div>
+                        <img 
+                            src="/src/assets/serv-prototipado.webp" 
+                            alt="Prototipado Industrial" 
+                            className="w-full h-full object-cover opacity-30"
+                        />
                         <div className="absolute inset-0 bg-gradient-to-r from-secondary-dark via-secondary-dark/90 to-secondary-dark/50"></div>
                     </div>
 
@@ -89,7 +92,11 @@ const Prototipado = () => {
                                 >
                                     {/* Background with Overlay */}
                                     <div className="absolute inset-0 z-0">
-                                        <div className="w-full h-full bg-slate-200 animate-pulse"></div>
+                                        <img 
+                                            src="/src/assets/serv-prototipado.webp" 
+                                            alt={f.title}
+                                            className="w-full h-full object-cover grayscale opacity-30"
+                                        />
                                         <div className="absolute inset-0 bg-secondary-dark/80 group-hover:bg-secondary-dark/70 transition-colors duration-500"></div>
                                     </div>
 

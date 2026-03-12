@@ -14,10 +14,8 @@ Este documento sirve como la "Verdad Única" para que cualquier sesión de IA o 
 4. **SEO & Performance**: Uso de `react-helmet-async` y optimización de assets.
 
 ## ✅ Hitos Alcanzados (Resumen)
-- **Refactorización Visual**: Sincronización de la página "Cotizar" con el estilo industrial del Hero.
-- **Sistema de Tokens**: Implementación de un sistema de variables documentado en CSS.
-- **Optimización Mobile**: Navbar corregido, flecha de scroll ajustada y menú hamburguesa funcional.
-- **Navbar Inteligente**: Forzado de visibilidad (fondo y logo color) en rutas críticas como `/cotizar`.
+- **Sincronización de Activos**: Restauración de fotos y videos industriales reales superando las versiones de IA.
+- **Consistencia de Escalas**: Decisión final de mantener la escala visual industrial actual (vínculo de identidad), descartando ajustes de compactación.
 - **Deployment**: Preparado para Hostinger (subcarpetas) y entorno local unificado.
 
 ## 📌 Reglas de Oro para el Futuro

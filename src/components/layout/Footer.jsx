@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* Brand Column */}
                     <div className="space-y-6">
-                        <img src={logo} alt="3Dsion Logo" className="h-14 w-auto brightness-110" />
+                        <img src={logo} alt="3Dsion Logo" className="h-14 w-auto object-contain brightness-110" />
                         <p className="text-gray-400 text-sm leading-relaxed">
                             27 años transformando ideas en realidades industriales mediante diseño avanzado y fabricación aditiva.
                         </p>

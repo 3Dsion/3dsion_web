@@ -4,7 +4,7 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/prueba/',
+  base: mode === 'production' ? '/prueba/' : '/',
   plugins: [react()],
   server: {
     warmup: {

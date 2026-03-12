@@ -4,6 +4,15 @@ Este documento registra cronológicamente las implementaciones realizadas en el 
 
 ---
 
+## 🛠️ Marzo 11, 2026: Cancelación de Ajuste de Escalas Visuales
+### Decisión de Diseño: Mantenimiento de Escala Industrial
+**Descripción:**
+- **Cancelación:** Se descartó el "Plan de Ajuste de Escalas Visuales (Estilo Hostinger)".
+- **Justificación:** Rodrigo decidió mantener las escalas actuales (Grandes/Industriales), priorizando la identidad visual impactante del sitio local sobre la versión anterior producida.
+- **Estado:** El código local se mantiene como la versión de referencia definitiva.
+
+---
+
 ## 🛠️ Febrero 22, 2026: Expansión Maestra de Plan de Producción v1.65
 ### Commit `pend-commit-id` - feat(v1.65): Expansión total de Guía Visual (30+ assets) y actualización NotebookLM
 **Descripción de la implementación:**

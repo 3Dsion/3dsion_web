@@ -51,7 +51,7 @@ const Navbar = () => {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link to="/" className="flex items-center" onClick={() => window.scrollTo(0, 0)}>
-                    <img src={logo} alt="3Dsion Logo" className={`h-8 lg:h-10 w-auto transition-all duration-300 ${scrolled ? '' : 'brightness-0 invert'}`} />
+                    <img src={logo} alt="3Dsion Logo" className={`h-8 lg:h-10 w-auto object-contain transition-all duration-300 ${scrolled ? '' : 'brightness-0 invert'}`} />
                 </Link>
 
                 {/* Desktop Links */}
