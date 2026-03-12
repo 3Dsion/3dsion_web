@@ -52,6 +52,7 @@ Este documento es la **Guía Maestra de Dirección de Arte** para 3DSION. Cada i
 | `ing-card-1.webp` | JSON o .jsx de /ingenieria | Close-up de pieza con mapa de calor (FEA). Capa de "Análisis de Factibilidad". | Validación técnica de archivos 3D: análisis de espesores comunes en PETG técnico. |
 | `ing-card-2.webp` | JSON o .jsx de /ingenieria | Dos piezas encastrando. Capa de "Detección de Interferencias / Tolerancias J7". | Ajuste de tolerancias mecánicas: ingeniería de ensambles para matricería industrial. |
 | `ing-card-3.webp` | JSON o .jsx de /ingenieria | Pieza con geometría orgánica (generativa). Capa de comparación "Peso original vs Optimizado". | Optimización topográfica y diseño generativo en piezas funcionales de alta resistencia. |
+| `ing-lateral.webp` | `src/pages/soluciones/Ingenieria.jsx` | Imagen lateral de sección explicativa: banco de trabajo con piezas en proceso de análisis. Capa de "Workflow de Validación". | Consultoría en ingeniería aditiva: flujo de trabajo profesional de validación técnica. |
 
 ---
 
@@ -63,6 +64,7 @@ Este documento es la **Guía Maestra de Dirección de Arte** para 3DSION. Cada i
 | `prod-card-1.webp` | JSON o .jsx de /produccion-en-serie | Cajas de cartón con etiquetas de envío y piezas listas. Capa de "Batch ID / Trazabilidad". | Producción en serie 3D: fabricación de repuestos idénticos con PETG de grado ingeniería. |
 | `prod-card-2.webp` | JSON o .jsx de /produccion-en-serie | Una moto (reparto) retirando pedido. Capa de "Logística Programada". | Servicio de manufactura 3D con entregas corporativas y logística B2B optimizada. |
 | `prod-card-3.webp` | JSON o .jsx de /produccion-en-serie | Tablet mostrando archivos 3D. Capa de "Inventario Digital Cloud". | Inventario digital: fabricamos tus piezas solo cuando las necesitás, eliminando stock. |
+| `prod-lateral.webp` | `src/pages/soluciones/Produccion.jsx` | Imagen lateral de sección explicativa: estante con lotes de piezas etiquetadas. Capa de "Control de Lotes". | Producción en serie con trazabilidad: control de calidad por lote en manufactura 3D. |
 
 ---
 
@@ -74,6 +76,7 @@ Este documento es la **Guía Maestra de Dirección de Arte** para 3DSION. Cada i
 | `gf-card-1.webp` | JSON o .jsx de /gran-formato | Persona sosteniendo una pieza enorme con una sola mano. Capa de "Bajo Peso / Alta Resistencia". | Piezas de gran volumen con material técnico liviano para aplicaciones industriales. |
 | `gf-card-2.webp` | JSON o .jsx de /gran-formato | Maqueta de arquitectura o diseño a escala real. Capa de "Fidelidad 1:1". | Maquetado a escala real: validación ergonómica y visual de productos de gran porte. |
 | `gf-card-3.webp` | JSON o .jsx de /gran-formato | Superficie de pieza gran formato con textura robusta. Capa de "Acabado Técnico Resistente". | Estructuras robustas en impresión 3D: durabilidad para entornos de trabajo exigentes. |
+| `gf-lateral.webp` | `src/pages/soluciones/GranFormato.jsx` | Imagen lateral de sección explicativa: operario junto a pieza de gran escala. Capa de "Escala 1:1". | Fabricación de piezas de gran escala: manufactura aditiva de componentes volumétricos. |
 
 ---
 
@@ -85,6 +88,7 @@ Este documento es la **Guía Maestra de Dirección de Arte** para 3DSION. Cada i
 | `proto-card-1.webp` | JSON o .jsx de /prototipado | 4 o 5 variantes de la misma pieza con pequeños cambios. Capa de "Iteración v1-v5". | Iteración rápida de diseños: refinamiento de mecanismos mediante prototipado ágil. |
 | `proto-card-2.webp` | JSON o .jsx de /prototipado | Pieza siendo sometida a esfuerzo (ej: torque con llave). Capa de "Ensayo Mecánico". | Pruebas funcionales de prototipos: validación de resistencia en materiales PETG y Flex. |
 | `proto-card-3.webp` | JSON o .jsx de /prototipado | Calibre digital midiendo cota crítica. Capa de "Precisión ±0.1mm". | Verificación dimensional de piezas impresas: control de calidad con rigor de ingeniería. |
+| `proto-laboratorio.webp` | `src/pages/soluciones/Prototipado.jsx` | Imagen lateral de sección "Laboratorio de Desarrollo": mesa de trabajo con herramientas, piezas prototipo y calibres. Capa de "Lab Environment". | Laboratorio de prototipado 3DSION: entorno de validación técnica con equipamiento industrial. |
 
 ---
 
@@ -96,6 +100,7 @@ Este documento es la **Guía Maestra de Dirección de Arte** para 3DSION. Cada i
 | `mod-card-1.webp` | JSON o .jsx de /modelado-y-desarrollo | Pantalla mostrando un sólido perfecto. Capa de "Fidelidad CAD-to-Print". | Modelado sólido y superficies: alta fidelidad geométrica para componentes mecánicos. |
 | `mod-card-2.webp` | JSON o .jsx de /modelado-y-desarrollo | Pieza con paredes delgadas optimizadas. Capa de "DFM (Design for Manufacturing)". | Optimización de archivos para impresión 3D: reducción de material y tiempos de fabricación. |
 | `mod-card-3.webp` | JSON o .jsx de /modelado-y-desarrollo | Pieza lista para imprimir en el slicer. Capa de "Simulación de Capas / Slicing". | Preparación de archivos G-code: optimización estructural para máxima resistencia mecánica. |
+| `mod-lateral.webp` | `src/pages/soluciones/Modelado.jsx` | Imagen lateral de sección explicativa: pantalla con árbol de operaciones CAD y pieza resultante. Capa de "Paramétrico → Físico". | Desarrollo de diseño paramétrico: del modelo CAD a la pieza funcional impresa en 3D. |
 
 ---
 
@@ -107,6 +112,7 @@ Este documento es la **Guía Maestra de Dirección de Arte** para 3DSION. Cada i
 | `inv-card-1.webp` | JSON o .jsx de /ingenieria-inversa | Pantalla con la nube de puntos densa. Capa de "Tolerancia de Escaneo". | Digitalización 3D: captura de geometrías complejas mediante nube de puntos de alta densidad. |
 | `inv-card-2.webp` | JSON o .jsx de /ingenieria-inversa | El paso de la malla STL al modelo sólido STEP. Capa de "Reconstrucción Paramétrica". | Conversión de malla 3D a sólido técnico: archivos STEP listos para mecanizado o impresión. |
 | `inv-card-3.webp` | JSON o .jsx de /ingenieria-inversa | Pieza original vs Pieza fabricada por 3DSION. Capa de "Match 99.9%". | Fabricación de repuestos industriales: clonación de componentes sin planos originales. |
+| `inv-lateral.webp` | `src/pages/soluciones/IngenieriaInversa.jsx` | Imagen lateral de sección explicativa: scanner 3D activo sobre mesa de trabajo con pieza industrial. Capa de "Captura en Progreso". | Digitalización 3D en proceso: relevamiento dimensional de piezas industriales con scanner de luz estructurada. |
 
 ---
 

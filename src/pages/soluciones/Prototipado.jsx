@@ -6,6 +6,8 @@ import Navbar from '../../components/layout/Navbar';
 import Footer from '../../components/layout/Footer';
 import SectionTitle from '../../components/ui/SectionTitle';
 import Button from '../../components/ui/Button';
+import protoHero from '../../assets/proto-hero.webp';
+import protoCard1 from '../../assets/proto-card-1.webp';
 
 const Prototipado = () => {
     useEffect(() => {
@@ -50,15 +52,8 @@ const Prototipado = () => {
                 {/* Hero Sección */}
                 <section className="relative pt-32 pb-24 bg-secondary-dark overflow-hidden">
                     <div className="absolute inset-0 z-0">
-                        {(() => {
-                            try {
-                                const imgUrl = new URL(`../../assets/proto-hero.webp`, import.meta.url).href;
-                                return <img src={imgUrl} alt="Prototipado Industrial" className="w-full h-full object-cover opacity-30" />;
-                            } catch (e) {
-                                return <div className="w-full h-full bg-slate-900 opacity-30" />;
-                            }
-                        })()}
-                        <div className="absolute inset-0 bg-gradient-to-r from-secondary-dark via-secondary-dark/90 to-secondary-dark/50"></div>
+                        <img src={protoHero} alt="Prototipado Industrial" className="w-full h-full object-cover opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-secondary-dark/80 via-secondary-dark/40 to-secondary-dark/10"></div>
                     </div>
 
                     <div className="container mx-auto px-6 relative z-10 text-center">
@@ -91,33 +86,24 @@ const Prototipado = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: i * 0.1 }}
-                                    className="relative overflow-hidden group rounded-[2rem] border border-gray-200 bg-white shadow-xl h-full"
                                 >
-                                    {/* Background with Overlay */}
-                                    <div className="absolute inset-0 z-0">
-                                        {(() => {
-                                            try {
-                                                // Usamos proto-card-1 para el primer item, y serv-prototipado para el resto por ahora
-                                                const imgName = i === 0 ? 'proto-card-1.webp' : 'proto-hero.webp';
-                                                const imgUrl = new URL(`../../assets/${imgName}`, import.meta.url).href;
-                                                return <img src={imgUrl} alt={f.title} className="w-full h-full object-cover grayscale opacity-30" />;
-                                            } catch (e) {
-                                                return <div className="w-full h-full bg-slate-800 opacity-30" />;
-                                            }
-                                        })()}
-                                        <div className="absolute inset-0 bg-secondary-dark/80 group-hover:bg-secondary-dark/70 transition-colors duration-500"></div>
-                                    </div>
-
-                                    <div className="relative z-10 p-8 flex flex-col h-full">
-                                        <div className="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center mb-6 text-pink-500 group-hover:scale-110 transition-transform duration-300">
+                                    {/* Card visual — solo imagen + ícono */}
+                                    <div className="relative overflow-hidden group rounded-[2rem] aspect-[4/3]">
+                                        <img
+                                            src={i === 0 ? protoCard1 : protoHero}
+                                            alt={f.title}
+                                            className="w-full h-full object-cover object-center opacity-80 scale-105 group-hover:scale-110 transition-transform duration-700"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-black/10"></div>
+                                        {/* Ícono glassmorphism arriba-izquierda */}
+                                        <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                                             <f.icon size={24} />
                                         </div>
-                                        {/* Accent Line */}
-                                        <div className="w-10 h-[2px] bg-gradient-to-r from-primary to-orange-400 mb-4"></div>
-                                        <h3 className="text-xl font-bold text-white mb-4">{f.title}</h3>
-                                        <p className="text-gray-300 text-sm leading-relaxed flex-grow">
-                                            {f.desc}
-                                        </p>
+                                    </div>
+                                    {/* Texto debajo de la card */}
+                                    <div className="pt-5 px-1">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2">{f.title}</h3>
+                                        <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
                                     </div>
                                 </motion.div>
                             ))}

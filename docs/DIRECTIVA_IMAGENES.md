@@ -26,6 +26,12 @@ Cuando Rodrigo indique "ejecutá la directiva de imágenes", debés:
 | `mod-*.webp` | Modelado | JSON o `.jsx` de `/modelado-y-desarrollo` | `"image"` |
 | `inv-*.webp` | Ingeniería Inversa | JSON o `.jsx` de `/ingenieria-inversa` | `"image"` |
 | `trayectoria-*.webp` | Trayectoria | JSON o `.jsx` de `/trayectoria` | `"image"` |
+| `proto-laboratorio.webp` | Prototipado (lateral) | `src/pages/soluciones/Prototipado.jsx` | `import` estático |
+| `ing-lateral.webp` | Ingeniería (lateral) | `src/pages/soluciones/Ingenieria.jsx` | `import` estático |
+| `prod-lateral.webp` | Producción en Serie (lateral) | `src/pages/soluciones/Produccion.jsx` | `import` estático |
+| `gf-lateral.webp` | Gran Formato (lateral) | `src/pages/soluciones/GranFormato.jsx` | `import` estático |
+| `mod-lateral.webp` | Modelado (lateral) | `src/pages/soluciones/Modelado.jsx` | `import` estático |
+| `inv-lateral.webp` | Ingeniería Inversa (lateral) | `src/pages/soluciones/IngenieriaInversa.jsx` | `import` estático |
 
 ---
 
