@@ -111,17 +111,32 @@ const Trayectoria = () => {
                                         </p>
                                     </div>
 
-                                    {/* Imagen placeholder / Visual */}
+                                    {/* Imagen Real / Visual */}
                                     <div className={`relative group ${i % 2 !== 0 ? 'lg:order-1' : ''}`}>
                                         <div className="absolute -inset-4 bg-primary/5 blur-3xl group-hover:bg-primary/10 transition-all rounded-[3rem] opacity-50"></div>
                                         <div className="relative rounded-[2rem] overflow-hidden border border-gray-100 aspect-video bg-gray-50 flex items-center justify-center">
-                                            {/* Visual Placeholder */}
-                                            <div className="text-center">
-                                                <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-4 shadow-sm border border-gray-100 group-hover:scale-110 transition-transform duration-500">
-                                                    <span className="text-primary font-bold">0{i + 1}</span>
-                                                </div>
-                                                <span className="text-gray-300 text-[10px] font-bold tracking-widest uppercase">{act.image}</span>
-                                            </div>
+                                            {/* Intentar cargar la imagen real */}
+                                            {(() => {
+                                                try {
+                                                    const imgUrl = new URL(`../assets/${act.image}`, import.meta.url).href;
+                                                    return (
+                                                        <img 
+                                                            src={imgUrl} 
+                                                            alt={act.title} 
+                                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                                        />
+                                                    );
+                                                } catch (e) {
+                                                    return (
+                                                        <div className="text-center">
+                                                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center mx-auto mb-4 shadow-sm border border-gray-100 group-hover:scale-110 transition-transform duration-500">
+                                                                <span className="text-primary font-bold">0{i + 1}</span>
+                                                            </div>
+                                                            <span className="text-gray-300 text-[10px] font-bold tracking-widest uppercase">{act.image}</span>
+                                                        </div>
+                                                    );
+                                                }
+                                            })()}
                                         </div>
                                     </div>
                                 </motion.div>

@@ -50,11 +50,14 @@ const Prototipado = () => {
                 {/* Hero Sección */}
                 <section className="relative pt-32 pb-24 bg-secondary-dark overflow-hidden">
                     <div className="absolute inset-0 z-0">
-                        <img 
-                            src="/src/assets/serv-prototipado.webp" 
-                            alt="Prototipado Industrial" 
-                            className="w-full h-full object-cover opacity-30"
-                        />
+                        {(() => {
+                            try {
+                                const imgUrl = new URL(`../../assets/proto-hero.webp`, import.meta.url).href;
+                                return <img src={imgUrl} alt="Prototipado Industrial" className="w-full h-full object-cover opacity-30" />;
+                            } catch (e) {
+                                return <div className="w-full h-full bg-slate-900 opacity-30" />;
+                            }
+                        })()}
                         <div className="absolute inset-0 bg-gradient-to-r from-secondary-dark via-secondary-dark/90 to-secondary-dark/50"></div>
                     </div>
 
@@ -92,11 +95,16 @@ const Prototipado = () => {
                                 >
                                     {/* Background with Overlay */}
                                     <div className="absolute inset-0 z-0">
-                                        <img 
-                                            src="/src/assets/serv-prototipado.webp" 
-                                            alt={f.title}
-                                            className="w-full h-full object-cover grayscale opacity-30"
-                                        />
+                                        {(() => {
+                                            try {
+                                                // Usamos proto-card-1 para el primer item, y serv-prototipado para el resto por ahora
+                                                const imgName = i === 0 ? 'proto-card-1.webp' : 'proto-hero.webp';
+                                                const imgUrl = new URL(`../../assets/${imgName}`, import.meta.url).href;
+                                                return <img src={imgUrl} alt={f.title} className="w-full h-full object-cover grayscale opacity-30" />;
+                                            } catch (e) {
+                                                return <div className="w-full h-full bg-slate-800 opacity-30" />;
+                                            }
+                                        })()}
                                         <div className="absolute inset-0 bg-secondary-dark/80 group-hover:bg-secondary-dark/70 transition-colors duration-500"></div>
                                     </div>
 
